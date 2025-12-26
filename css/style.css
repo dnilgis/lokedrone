@@ -1,0 +1,123 @@
+/* --- Global Variables --- */
+:root {
+    --primary-color: #ff9900; /* Loke Orange */
+    --text-color: #333;
+    --bg-color: #ffffff;
+    --link-color: #0000EE;
+    --container-width: 900px;
+}
+
+/* --- Basic Reset --- */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Layout Components --- */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.alert-bar {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+}
+
+/* --- Header & Logo --- */
+.site-header {
+    text-align: left;
+    margin: 40px 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+.logo-img {
+    max-width: 300px; /* Prevents logo from being too huge */
+    height: auto;
+    display: block;
+}
+
+/* --- Gallery --- */
+.gallery {
+    display: flex;
+    gap: 20px;
+    margin: 40px 0;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- Services Section --- */
+.services {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.service-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.service-card h3 {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #2e7d32; /* Money green */
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+/* --- Articles --- */
+.articles h2 {
+    font-style: italic;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.note {
+    font-size: 0.85em;
+    color: #666;
+}
+
+/* --- Footer --- */
+.site-footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.footer-key img {
+    max-width: 60px; /* Keeps the key icon small */
+    margin: 15px 0;
+    opacity: 0.8;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #999;
+}
