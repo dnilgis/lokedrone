@@ -191,86 +191,6 @@
         </div>
     </section>
 
-    <section id="quote" class="quote-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Request a Quote</h2>
-                <p>Get a free estimate for your agricultural drone service needs</p>
-            </div>
-            <div class="quote-content">
-                <div class="quote-info">
-                    <h3>Simple, Transparent Pricing</h3>
-                    <div class="pricing-box">
-                        <div class="price">$18<span>/acre</span></div>
-                        <p>Standard rate for most services</p>
-                    </div>
-                    <ul class="quote-benefits">
-                        <li>✓ No hidden fees</li>
-                        <li>✓ Free field assessment</li>
-                        <li>✓ Volume discounts available</li>
-                        <li>✓ Flexible scheduling</li>
-                        <li>✓ Weather monitoring included</li>
-                    </ul>
-                </div>
-                <form class="quote-form" id="quoteForm" action="YOUR_GOOGLE_SCRIPT_URL" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="_replyto" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="acres">Estimated Acreage *</label>
-                            <input type="number" id="acres" name="acres" min="1" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Needed *</label>
-                        <select id="service" name="service" required>
-                            <option value="">Select a service...</option>
-                            <option value="crop-spraying">Crop Spraying</option>
-                            <option value="cover-crop">Cover Crop Seeding</option>
-                            <option value="frost-seeding">Frost Seeding</option>
-                            <option value="multiple">Multiple Services</option>
-                            <option value="other">Other / Not Sure</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="location">Farm Location (City/County) *</label>
-                        <input type="text" id="location" name="location" placeholder="e.g., Chetek, Barron County, WI" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="timeframe">Desired Timeframe</label>
-                        <select id="timeframe" name="timeframe">
-                            <option value="asap">As Soon As Possible</option>
-                            <option value="1-2weeks">1-2 Weeks</option>
-                            <option value="2-4weeks">2-4 Weeks</option>
-                            <option value="1month+">1+ Month</option>
-                            <option value="flexible">Flexible</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Additional Details</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project, crop type, field conditions, or any questions you have..."></textarea>
-                    </div>
-                    <div class="estimated-cost" id="estimatedCost" style="display: none;">
-                        <strong>Estimated Cost:</strong> <span id="costAmount">$0</span>
-                        <small>Based on $18/acre. Final price may vary based on field conditions and service requirements.</small>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit Quote Request</button>
-                </form>
-            </div>
-        </div>
-    </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
@@ -401,10 +321,6 @@
                     <div class="contact-item">
                         <strong>Our Team:</strong>
                         <p>In addition to our certified crop advisors, we work with three experienced subcontractors to ensure fast, reliable service across our entire coverage area.</p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Hours:</strong>
-                        <p>Monday - Saturday: 7am - 7pm<br>Sunday: By appointment</p>
                     </div>
                 </div>
                 <div class="quick-contact">
