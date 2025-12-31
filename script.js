@@ -1,4 +1,3 @@
-// Mobile Menu Toggle
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -9,7 +8,24 @@ if (mobileMenuToggle) {
     });
 }
 
-// Close mobile menu when clicking a link
+const logoTrigger = document.getElementById('logoTrigger');
+const asciiDrone = document.getElementById('asciiDrone');
+let droneFlying = false;
+
+if (logoTrigger && asciiDrone) {
+    logoTrigger.addEventListener('mouseenter', () => {
+        if (!droneFlying) {
+            droneFlying = true;
+            asciiDrone.classList.add('active');
+            
+            setTimeout(() => {
+                asciiDrone.classList.remove('active');
+                droneFlying = false;
+            }, 3000);
+        }
+    });
+}
+
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -20,13 +36,12 @@ navLinks.forEach(link => {
     });
 });
 
-// Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offset = 80; // Account for fixed navbar
+            const offset = 80; 
             const targetPosition = target.offsetTop - offset;
             window.scrollTo({
                 top: targetPosition,
@@ -36,7 +51,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Quote Form - Cost Calculator
 const acresInput = document.getElementById('acres');
 const estimatedCostDiv = document.getElementById('estimatedCost');
 const costAmountSpan = document.getElementById('costAmount');
@@ -55,13 +69,12 @@ if (acresInput && estimatedCostDiv && costAmountSpan) {
     });
 }
 
-// Quote Form Submission
 const quoteForm = document.getElementById('quoteForm');
 if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form data
+        
         const formData = {
             name: document.getElementById('name').value,
             phone: document.getElementById('phone').value,
@@ -73,39 +86,37 @@ if (quoteForm) {
             message: document.getElementById('message').value
         };
         
-        // In a real implementation, you would send this data to a server
-        // For now, we'll just show a success message
+        
+        
         console.log('Quote request submitted:', formData);
         
-        // Show success message
+        
         showSuccessMessage(quoteForm, 'Thank you! We\'ve received your quote request and will contact you within 24 hours.');
         
-        // Reset form
+        
         quoteForm.reset();
         estimatedCostDiv.style.display = 'none';
     });
 }
 
-// Contact Form Submission
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // In a real implementation, you would send this data to a server
+        
         console.log('Contact form submitted');
         
-        // Show success message
+        
         showSuccessMessage(contactForm, 'Thank you for reaching out! We\'ll get back to you soon.');
         
-        // Reset form
+        
         contactForm.reset();
     });
 }
 
-// Success Message Display
 function showSuccessMessage(form, message) {
-    // Create success message element
+    
     const successDiv = document.createElement('div');
     successDiv.className = 'success-message';
     successDiv.innerHTML = `
@@ -123,35 +134,33 @@ function showSuccessMessage(form, message) {
         </div>
     `;
     
-    // Insert after form
+    
     form.parentNode.insertBefore(successDiv, form.nextSibling);
     
-    // Scroll to message
+    
     successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
     
-    // Remove message after 5 seconds
+    
     setTimeout(() => {
         successDiv.remove();
     }, 5000);
 }
 
-// Navbar scroll effect
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+    if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        navbar.classList.remove('scrolled');
     }
     
     lastScroll = currentScroll;
 });
 
-// Animate elements on scroll (fade in)
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -166,7 +175,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe service cards, testimonials, and case studies
 document.querySelectorAll('.service-card, .testimonial-card, .case-study').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -174,7 +182,6 @@ document.querySelectorAll('.service-card, .testimonial-card, .case-study').forEa
     observer.observe(el);
 });
 
-// Phone number formatting
 const phoneInput = document.getElementById('phone');
 if (phoneInput) {
     phoneInput.addEventListener('input', (e) => {
@@ -193,7 +200,6 @@ if (phoneInput) {
     });
 }
 
-// Form validation styling
 document.querySelectorAll('input[required], select[required], textarea[required]').forEach(input => {
     input.addEventListener('invalid', (e) => {
         e.preventDefault();
