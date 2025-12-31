@@ -149,7 +149,6 @@ function showSuccessMessage(form, message) {
 }
 
 let lastScroll = 0;
-const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
