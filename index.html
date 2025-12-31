@@ -1,1511 +1,343 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #2c5f2d;
-    --primary-dark: #1a4019;
-    --secondary-color: #4a90e2;
-    --accent-color: #97be5a;
-    --orange: #ff6b35;
-    --orange-light: #ff8c61;
-    --orange-dark: #e5541f;
-    --text-dark: #333;
-    --text-light: #666;
-    --bg-light: #f8f9fa;
-    --bg-white: #ffffff;
-    --border-color: #e0e0e0;
-    --shadow: 0 2px 10px rgba(0,0,0,0.1);
-    --shadow-lg: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: var(--text-dark);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-section {
-    padding: 80px 0;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-    position: relative;
-}
-
-.section-header h2 {
-    font-size: 2.8rem;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-    font-weight: 800;
-    position: relative;
-    display: inline-block;
-}
-
-.section-header h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    border-radius: 2px;
-}
-
-.section-header p {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    max-width: 600px;
-    margin: 0 auto;
-    margin-top: 25px;
-}
-
-
-.btn {
-    display: inline-block;
-    padding: 14px 32px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    border: none;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
-
-.btn:hover::before {
-    width: 300px;
-    height: 300px;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.5);
-    background: linear-gradient(135deg, var(--orange-light), var(--orange));
-}
-
-.btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
-}
-
-
-.navbar {
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 15px 0;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-}
-
-.nav-brand .logo {
-    height: 50px;
-    transition: height 0.3s ease;
-}
-
-.nav-menu {
-    display: flex !important;
-    list-style: none !important;
-    gap: 35px;
-    margin: 0;
-    padding: 0;
-    flex-direction: row !important;
-}
-
-.nav-menu li {
-    list-style: none !important;
-}
-
-.nav-menu a {
-    color: var(--text-dark);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-    position: relative;
-    padding: 5px 0;
-}
-
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    transition: width 0.3s ease;
-}
-
-.nav-menu a:hover {
-    color: var(--primary-color);
-}
-
-.nav-menu a:hover::after {
-    width: 100%;
-}
-
-.navbar.scrolled {
-    padding: 10px 0;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.12);
-}
-
-.navbar.scrolled .logo {
-    height: 40px;
-}
-
-.mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.mobile-menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-dark);
-    transition: all 0.3s ease;
-}
-
-
-.hero {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
-    color: white;
-    padding: 140px 0 120px;
-    position: relative;
-    overflow: hidden;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.35;
-}
-
-.hero-background::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="none"/><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-    opacity: 0.4;
-    animation: backgroundShift 20s ease-in-out infinite;
-}
-
-@keyframes backgroundShift {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-20px, -20px); }
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(151, 190, 90, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: float 15s ease-in-out infinite;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -5%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(74, 144, 226, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: float 18s ease-in-out infinite reverse;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-30px) rotate(5deg); }
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(26, 64, 25, 0.85) 0%, rgba(44, 95, 45, 0.7) 100%);
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 900;
-    margin-bottom: 25px;
-    line-height: 1.1;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    letter-spacing: -1px;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 60px;
-    opacity: 0.95;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-}
-
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 50px;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-}
-
-.stat-number {
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: var(--orange-light);
-    line-height: 1;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.stat-label {
-    font-size: 1rem;
-    opacity: 0.9;
-    margin-top: 8px;
-    font-weight: 500;
-}
-
-.stat-divider {
-    width: 1px;
-    height: 60px;
-    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3), transparent);
-}
-
-.hero-cta {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.hero-cta .btn {
-    min-width: 200px;
-    font-size: 1.1rem;
-    padding: 16px 36px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-.services {
-    background: var(--bg-light);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.service-card {
-    background: white;
-    padding: 45px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(0,0,0,0.05);
-    position: relative;
-    overflow: hidden;
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-}
-
-.service-card:hover::before {
-    transform: scaleX(1);
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(44, 95, 45, 0.15);
-    border-color: var(--accent-color);
-}
-
-.service-icon {
-    font-size: 3.5rem;
-    margin-bottom: 25px;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-    transform: scale(1.1) rotate(-5deg);
-}
-
-.service-card h3 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 18px;
-    font-weight: 700;
-}
-
-.service-card p {
-    color: var(--text-light);
-    margin-bottom: 20px;
-}
-
-.service-benefits {
-    list-style: none;
-}
-
-.service-benefits li {
-    padding: 8px 0;
-    padding-left: 25px;
-    position: relative;
-    color: var(--text-dark);
-}
-
-.service-benefits li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-    font-weight: bold;
-}
-
-.service-features {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.service-features li {
-    padding: 8px 0;
-    padding-left: 25px;
-    position: relative;
-    color: var(--text-dark);
-    font-size: 0.95rem;
-}
-
-.service-features li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--orange);
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.service-card.featured {
-    border: 2px solid var(--orange);
-    background: linear-gradient(135deg, #fff 0%, #fff7f4 100%);
-}
-
-.service-card.featured::before {
-    background: linear-gradient(90deg, var(--orange), var(--orange-light));
-    transform: scaleX(1);
-}
-
-.services-footer {
-    text-align: center;
-    padding: 50px 30px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    border-radius: 20px;
-    color: white;
-    margin-top: 30px;
-}
-
-.services-footer h3 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: var(--orange-light);
-}
-
-.services-footer p {
-    font-size: 1.15rem;
-    opacity: 0.9;
-}
-
-.equipment-section {
-    background: white;
-    padding: 50px 40px;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-.equipment-section h3 {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-    font-weight: 800;
-}
-
-.fleet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.fleet-item {
-    background: var(--bg-light);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.fleet-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(44, 95, 45, 0.15);
-    border-color: var(--accent-color);
-}
-
-.fleet-image {
-    width: 100%;
-    height: 220px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    position: relative;
-    overflow: hidden;
-}
-
-.fleet-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.fleet-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.fleet-placeholder span {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.fleet-placeholder p {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.fleet-info {
-    padding: 25px;
-}
-
-.fleet-info h4 {
-    color: var(--primary-color);
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-.new-badge {
-    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-    color: white;
-    font-size: 0.65rem;
-    padding: 4px 10px;
-    border-radius: 12px;
-    margin-left: 10px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    vertical-align: middle;
-    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
-}
-
-.fleet-quantity {
-    display: inline-block;
-    background: var(--accent-color);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.fleet-info p {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.fleet-specs {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0 0 0;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-}
-
-.fleet-specs li {
-    padding: 6px 0;
-    color: var(--text-dark);
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.fleet-specs li strong {
-    color: var(--primary-color);
-    font-weight: 600;
-    min-width: 120px;
-    display: inline-block;
-}
-
-
-.service-area {
-    background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
-}
-
-.area-content {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.area-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.area-feature {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.area-feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.15);
-    border-color: var(--orange);
-}
-
-.feature-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.area-feature h3 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.area-feature p {
-    color: var(--text-light);
-    line-height: 1.7;
-    font-size: 1.05rem;
-}
-
-
-.quote-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.quote-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(151, 190, 90, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
-.quote-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
-    align-items: start;
-    position: relative;
-    z-index: 1;
-}
-
-.quote-info h3 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: 800;
-}
-
-.pricing-box {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    padding: 40px;
-    border-radius: 16px;
-    text-align: center;
-    margin-bottom: 35px;
-    box-shadow: 0 10px 40px rgba(44, 95, 45, 0.2);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.pricing-box::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
-    animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.price {
-    font-size: 4rem;
-    font-weight: 900;
-    color: var(--accent-color);
-    margin-bottom: 15px;
-    position: relative;
-    z-index: 1;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.price span {
-    font-size: 1.8rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 600;
-}
-
-.pricing-box p {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1.1rem;
-    position: relative;
-    z-index: 1;
-}
-
-.quote-benefits {
-    list-style: none;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.quote-benefits li {
-    padding: 12px 0;
-    color: var(--text-dark);
-    font-size: 1.05rem;
-    font-weight: 500;
-}
-
-.quote-form {
-    background: white;
-    padding: 45px;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--text-dark);
-    font-weight: 600;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 14px 18px;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: all 0.3s ease;
-    background: white;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(44, 95, 45, 0.1);
-    transform: translateY(-2px);
-}
-
-.form-group input:hover,
-.form-group select:hover,
-.form-group textarea:hover {
-    border-color: var(--accent-color);
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.estimated-cost {
-    background: var(--bg-light);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    border-left: 4px solid var(--accent-color);
-}
-
-.estimated-cost strong {
-    color: var(--primary-color);
-    display: block;
-    margin-bottom: 5px;
-}
-
-#costAmount {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--primary-color);
-}
-
-.estimated-cost small {
-    display: block;
-    color: var(--text-light);
-    margin-top: 10px;
-}
-
-.quote-form .btn {
-    width: 100%;
-}
-
-
-.testimonials {
-    background: white;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.testimonial-card {
-    background: white;
-    padding: 40px;
-    border-radius: 16px;
-    border-left: 5px solid var(--accent-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 6rem;
-    color: var(--accent-color);
-    opacity: 0.1;
-    font-family: Georgia, serif;
-    line-height: 1;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(44, 95, 45, 0.15);
-}
-
-.testimonial-rating {
-    color: #ffc107;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.testimonial-text {
-    color: var(--text-dark);
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 30px;
-    line-height: 1.8;
-    position: relative;
-    z-index: 1;
-}
-
-.testimonial-author strong {
-    display: block;
-    color: var(--primary-color);
-    font-size: 1.15rem;
-    margin-bottom: 5px;
-    font-weight: 700;
-}
-
-.testimonial-author span {
-    color: var(--text-light);
-    font-size: 0.95rem;
-}
-
-
-.tar-spot-map {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.tar-spot-map::before {
-    content: '';
-    position: absolute;
-    top: -30%;
-    left: -10%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(151, 190, 90, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
-.map-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-.map-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.info-card {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border-left: 4px solid var(--primary-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-card:hover {
-    transform: translateX(5px);
-    box-shadow: 0 8px 30px rgba(44, 95, 45, 0.15);
-}
-
-.info-card h3 {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.info-card p {
-    color: var(--text-dark);
-    line-height: 1.7;
-}
-
-.risk-legend {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
-}
-
-.risk-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.risk-indicator {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.risk-indicator.high {
-    background: linear-gradient(135deg, #dc3545, #c82333);
-}
-
-.risk-indicator.moderate {
-    background: linear-gradient(135deg, #ffc107, #e0a800);
-}
-
-.risk-indicator.low {
-    background: linear-gradient(135deg, #28a745, #218838);
-}
-
-.map-embed {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    overflow: hidden;
-    position: relative;
-    min-height: 500px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.map-embed iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-    display: block;
-}
-
-
-@media (max-width: 1200px) {
-    .map-embed iframe {
-        height: 450px;
-    }
-}
-
-@media (max-width: 968px) {
-    .map-embed {
-        min-height: 400px;
-    }
-    
-    .map-embed iframe {
-        height: 400px;
-    }
-}
-
-@media (max-width: 768px) {
-    .map-embed {
-        min-height: 350px;
-    }
-    
-    .map-embed iframe {
-        height: 350px;
-    }
-}
-
-@media (max-width: 480px) {
-    .map-embed {
-        min-height: 300px;
-    }
-    
-    .map-embed iframe {
-        height: 300px;
-    }
-}
-
-
-.map-cta {
-    background: white;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.cta-content h3 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 15px;
-    font-weight: 800;
-}
-
-.cta-content p {
-    color: var(--text-dark);
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width: 968px) {
-    .map-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .cta-content h3 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .cta-content h3 {
-        font-size: 1.6rem;
-    }
-    
-    .cta-content p {
-        font-size: 1rem;
-    }
-}
-
-
-.contact {
-    background: white;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-.contact-info {
-    background: var(--bg-light);
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.contact-info h3 {
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-}
-
-.contact-item {
-    margin-bottom: 25px;
-}
-
-.contact-item strong {
-    display: block;
-    color: var(--primary-color);
-    margin-bottom: 5px;
-    font-size: 1.05rem;
-}
-
-.contact-item p {
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-.contact-item a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-    text-decoration: underline;
-    color: var(--primary-color);
-}
-
-.cca-contacts {
-    margin-top: 10px;
-}
-
-.cca-person {
-    padding: 15px;
-    background: rgba(44, 95, 45, 0.05);
-    border-radius: 8px;
-    margin-bottom: 12px;
-    border-left: 3px solid var(--accent-color);
-}
-
-.cca-person:last-child {
-    margin-bottom: 0;
-}
-
-.cca-person p {
-    margin: 0;
-    line-height: 1.8;
-}
-
-.cca-person p:first-child {
-    color: var(--primary-color);
-    margin-bottom: 5px;
-    font-weight: 700;
-}
-
-.cca-person a {
-    font-size: 1.05rem;
-    display: block;
-    margin-top: 5px;
-}
-
-.cca-number {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 3px !important;
-}
-
-.quick-contact {
-    background: var(--bg-light);
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.quick-contact h3 {
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-}
-
-
-.footer {
-    background: var(--primary-dark);
-    color: white;
-    padding: 50px 0 30px;
-}
-
-.footer-logo {
-    height: 40px;
-    width: auto;
-    margin-bottom: 15px;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin-bottom: 40px;
-}
-
-.footer-brand h3 {
-    margin-bottom: 10px;
-}
-
-.footer-brand p {
-    opacity: 0.8;
-}
-
-.footer-affiliations {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.affiliations-title {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    opacity: 0.7;
-    font-weight: 600;
-}
-
-.footer-affiliations p:last-child {
-    font-size: 0.95rem;
-    opacity: 0.9;
-    font-weight: 500;
-}
-
-.footer-links {
-    display: flex;
-    gap: 30px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.footer-links a:hover {
-    opacity: 1;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-bottom p {
-    opacity: 0.7;
-}
-
-
-@media (max-width: 968px) {
-    .quote-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero {
-        min-height: auto;
-        padding: 100px 0 80px;
-    }
-    
-    .hero h1 {
-        font-size: 2.8rem;
-    }
-    
-    .hero-stats {
-        gap: 30px;
-        padding: 25px;
-    }
-    
-    .stat-divider {
-        display: none;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .hero-cta .btn {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-brand .logo {
-        height: 40px;
-    }
-    
-    .cca-person p:first-child {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-    
-    .cca-person {
-        padding: 12px;
-    }
-    
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        gap: 10px;
-    }
-    
-    .nav-menu a::after {
-        display: none;
-    }
-    
-    .nav-menu.active {
-        display: flex;
-    }
-    
-    .mobile-menu-toggle {
-        display: flex;
-    }
-    
-    section {
-        padding: 60px 0;
-    }
-    
-    .section-header h2 {
-        font-size: 2rem;
-    }
-    
-    .hero {
-        padding: 80px 0 60px;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .hero-stats {
-        flex-direction: column;
-        gap: 25px;
-        padding: 25px 20px;
-    }
-    
-    .stat-number {
-        font-size: 3rem;
-    }
-    
-    .hero-cta .btn {
-        font-size: 1rem;
-        padding: 14px 28px;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .fleet-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .footer-links {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .price {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-brand .logo {
-        height: 35px;
-    }
-    
-    .hero h1 {
-        font-size: 1.75rem;
-    }
-    
-    .stat-number {
-        font-size: 2.5rem;
-    }
-    
-    .section-header h2 {
-        font-size: 1.75rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loke Drone LC - Professional agricultural drone services in Wisconsin and Minnesota. Crop spraying, cover crop seeding, and frost seeding at $18/acre.">
+    <title>Loke Drone LC - Professional Agricultural Drone Services</title>
+    <link rel="stylesheet" href="styles.css?v=2025-12-31">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="logo.png" alt="Loke Drone LC" class="logo" id="logoTrigger">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#fleet">Our Fleet</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Precision Agriculture from Above</h1>
+            <p class="hero-subtitle">Professional drone services for crop spraying, seeding, and more</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">States Served</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Acres Treated</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label">Professional Drones</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive drone solutions for modern agriculture</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌾</div>
+                    <h3>Crop Spraying</h3>
+                    <p>Precise application of pesticides, herbicides, and fungicides with advanced drone technology. Reduce chemical use and minimize soil compaction.</p>
+                    <ul class="service-benefits">
+                        <li>Even coverage across terrain</li>
+                        <li>Access to wet or difficult fields</li>
+                        <li>Reduced crop damage</li>
+                        <li>Fast application times</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h3>Cover Crop Seeding</h3>
+                    <p>Efficient aerial seeding for cover crops that protect and enrich your soil. Perfect for establishing winter cover or companion planting.</p>
+                    <ul class="service-benefits">
+                        <li>Quick field coverage</li>
+                        <li>Seed in standing crops</li>
+                        <li>Minimal soil disturbance</li>
+                        <li>Optimal seed distribution</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">❄️</div>
+                    <h3>Frost Seeding</h3>
+                    <p>Take advantage of freeze-thaw cycles with precision frost seeding. Establish pastures and forage crops with minimal equipment.</p>
+                    <ul class="service-benefits">
+                        <li>Early spring seeding</li>
+                        <li>No field entry required</li>
+                        <li>Cost-effective establishment</li>
+                        <li>Improved seed-to-soil contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="equipment-section" id="fleet">
+                <h3>Our Professional Fleet</h3>
+                <div class="fleet-grid">
+                    <div class="fleet-item">
+                        <div class="fleet-image">
+                            <img src="images/t50.jpg" alt="DJI T50 Drone" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fleet-placeholder">
+                                <span>📷</span>
+                                <p>DJI T50</p>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h4>DJI T50</h4>
+                            <span class="fleet-quantity">2 Units</span>
+                            <p>High-capacity spraying drone with advanced precision</p>
+                            <ul class="fleet-specs">
+                                <li><strong>Tank Capacity:</strong> 13.2 gallons</li>
+                                <li><strong>Spray Width:</strong> Up to 36 ft</li>
+                                <li><strong>Coverage:</strong> 30+ acres/hour</li>
+                                <li><strong>Flight Time:</strong> 14-18 minutes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fleet-item">
+                        <div class="fleet-image">
+                            <img src="images/t100.jpg" alt="DJI T100 Drone" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fleet-placeholder">
+                                <span>📷</span>
+                                <p>DJI T100</p>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h4>DJI T100 <span class="new-badge">NEW</span></h4>
+                            <span class="fleet-quantity">1 Unit</span>
+                            <p>Large-scale operations and extensive coverage</p>
+                            <ul class="fleet-specs">
+                                <li><strong>Tank Capacity:</strong> 26.4 gallons</li>
+                                <li><strong>Spray Width:</strong> Up to 39 ft</li>
+                                <li><strong>Coverage:</strong> 40+ acres/hour</li>
+                                <li><strong>Flight Time:</strong> 10-15 minutes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fleet-item">
+                        <div class="fleet-image">
+                            <img src="images/matrice4t.jpg" alt="Matrice 4T" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fleet-placeholder">
+                                <span>📷</span>
+                                <p>Matrice 4T</p>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h4>Matrice 4T</h4>
+                            <span class="fleet-quantity">1 Unit</span>
+                            <p>Aerial mapping, surveying, and crop monitoring</p>
+                            <ul class="fleet-specs">
+                                <li><strong>Camera:</strong> 48MP RGB + thermal</li>
+                                <li><strong>Flight Time:</strong> Up to 55 minutes</li>
+                                <li><strong>Range:</strong> 12.4 mile transmission</li>
+                                <li><strong>Purpose:</strong> NDVI mapping, scouting</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fleet-item">
+                        <div class="fleet-image">
+                            <img src="images/j100.jpg" alt="EAVision J100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fleet-placeholder">
+                                <span>📷</span>
+                                <p>EAVision J100</p>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h4>EAVision J100</h4>
+                            <span class="fleet-quantity">Subcontractors</span>
+                            <p>Extended network for maximum coverage capacity</p>
+                            <ul class="fleet-specs">
+                                <li><strong>Tank Capacity:</strong> 26.4 gallons</li>
+                                <li><strong>Spray Width:</strong> Up to 39 ft</li>
+                                <li><strong>Coverage:</strong> 35+ acres/hour</li>
+                                <li><strong>Network:</strong> 3 subcontractor units</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-area">
+        <div class="container">
+            <div class="section-header">
+                <h2>Coverage Across Wisconsin & Minnesota</h2>
+                <p>Fast, reliable service when you need it most</p>
+            </div>
+            <div class="area-content">
+                <div class="area-grid">
+                    <div class="area-feature">
+                        <div class="feature-icon">📍</div>
+                        <h3>Chetek, WI</h3>
+                        <p>Centrally located to serve farms throughout both states efficiently</p>
+                    </div>
+                    <div class="area-feature">
+                        <div class="feature-icon">👥</div>
+                        <h3>Expert Team</h3>
+                        <p>2 Certified Crop Advisors (CCA) plus 3 experienced subcontractor pilots ready to fly</p>
+                    </div>
+                    <div class="area-feature">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Quick Turnaround</h3>
+                        <p>Contact us for coverage confirmation and same-week scheduling availability</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Real results from farms across Wisconsin and Minnesota</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Loke Drone made crop spraying so much easier. They covered 200 acres in a fraction of the time it would have taken with traditional equipment, and we saw better coverage too."</p>
+                    <div class="testimonial-author">
+                        <strong>Mike Johnson</strong>
+                        <span>Corn & Soybean Farm, Barron County, WI</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"We were able to get our cover crop seeded into standing corn without any issues. The precision and efficiency saved us time and money. Highly recommend their services."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Anderson</strong>
+                        <span>Organic Farm, Polk County, WI</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Professional service from start to finish. They worked around the weather and got our fields treated exactly when needed. The pricing was transparent and fair."</p>
+                    <div class="testimonial-author">
+                        <strong>Tom Peterson</strong>
+                        <span>Dairy Farm, Chisago County, MN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to discuss your agricultural drone service needs?</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Loke Drone LC</h3>
+                    <div class="contact-item">
+                        <strong>Location:</strong>
+                        <p>Chetek, Wisconsin</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Service Area:</strong>
+                        <p>Wisconsin & Minnesota</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Certified Crop Advisors:</strong>
+                        <div class="cca-contacts">
+                            <div class="cca-person">
+                                <p><strong>Sigurd R. Lindquist</strong></p>
+                                <p class="cca-number">CCA 813089</p>
+                                <p><a href="tel:+17157972428">(715) 797-2428</a></p>
+                            </div>
+                            <div class="cca-person">
+                                <p><strong>Kevin J. Austin</strong></p>
+                                <p class="cca-number">CCA 736466</p>
+                                <p><a href="tel:+17156411239">(715) 641-1239</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <p><a href="mailto:info@lokedrone.com">info@lokedrone.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Our Team:</strong>
+                        <p>In addition to our certified crop advisors, we work with three experienced subcontractors to ensure fast, reliable service across our entire coverage area.</p>
+                    </div>
+                </div>
+                <div class="quick-contact">
+                    <h3>Quick Contact</h3>
+                    <form id="contactForm" action="YOUR_GOOGLE_SCRIPT_URL" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="_replyto" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Loke Drone LC" class="footer-logo">
+                    <h3>Loke Drone LC</h3>
+                    <p>Professional Agricultural Drone Services</p>
+                    <div class="footer-affiliations">
+                        <p class="affiliations-title">Certified & Professional</p>
+                        <p>AAOC #23021A • FAA Part 107 Certified • CCA Licensed</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#quote">Get Quote</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Loke Drone LC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
