@@ -1327,16 +1327,19 @@ section {
 
 .cca-person p {
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .cca-person p:first-child {
     color: var(--primary-color);
     margin-bottom: 5px;
+    font-weight: 700;
 }
 
 .cca-person a {
     font-size: 1.05rem;
+    display: block;
+    margin-top: 5px;
 }
 
 .quick-contact {
@@ -1471,6 +1474,15 @@ section {
 @media (max-width: 768px) {
     .nav-brand .logo {
         height: 40px;
+    }
+    
+    .cca-person p:first-child {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .cca-person {
+        padding: 12px;
     }
     
     .nav-menu {
