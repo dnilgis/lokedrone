@@ -8,15 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <img src="logo.png" alt="Loke Drone LC" class="logo">
-                <div class="brand-text">
-                    <h1>Loke Drone LC</h1>
-                    <p class="tagline">Professional Agricultural Drone Services</p>
-                </div>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
@@ -33,7 +28,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background"></div>
         <div class="hero-overlay"></div>
@@ -63,7 +57,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
@@ -106,30 +99,69 @@
                 </div>
             </div>
             <div class="equipment-section">
-                <h3>Professional Fleet</h3>
-                <div class="equipment-grid">
-                    <div class="equipment-item">
-                        <strong>DJI T50</strong>
-                        <span>High-capacity spraying</span>
+                <h3>Our Professional Fleet</h3>
+                <div class="fleet-grid">
+                    <div class="fleet-item">
+                        <div class="fleet-image">
+                            <img src="images/t50.jpg" alt="DJI T50 Drone" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fleet-placeholder">
+                                <span>📷</span>
+                                <p>DJI T50</p>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h4>DJI T50</h4>
+                            <span class="fleet-quantity">2 Units</span>
+                            <p>High-capacity spraying drone with advanced precision</p>
+                        </div>
                     </div>
-                    <div class="equipment-item">
-                        <strong>DJI T100</strong>
-                        <span>Large-scale operations</span>
+                    <div class="fleet-item">
+                        <div class="fleet-image">
+                            <img src="images/t100.jpg" alt="DJI T100 Drone" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fleet-placeholder">
+                                <span>📷</span>
+                                <p>DJI T100</p>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h4>DJI T100</h4>
+                            <span class="fleet-quantity">1 Unit</span>
+                            <p>Large-scale operations and extensive coverage</p>
+                        </div>
                     </div>
-                    <div class="equipment-item">
-                        <strong>EAVision J100</strong>
-                        <span>Precision agriculture</span>
+                    <div class="fleet-item">
+                        <div class="fleet-image">
+                            <img src="images/matrice4t.jpg" alt="Matrice 4T" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fleet-placeholder">
+                                <span>📷</span>
+                                <p>Matrice 4T</p>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h4>Matrice 4T</h4>
+                            <span class="fleet-quantity">1 Unit</span>
+                            <p>Aerial mapping, surveying, and crop monitoring</p>
+                        </div>
                     </div>
-                    <div class="equipment-item">
-                        <strong>Matrice 4T</strong>
-                        <span>Aerial mapping & surveying</span>
+                    <div class="fleet-item">
+                        <div class="fleet-image">
+                            <img src="images/j100.jpg" alt="EAVision J100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fleet-placeholder">
+                                <span>📷</span>
+                                <p>EAVision J100</p>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h4>EAVision J100</h4>
+                            <span class="fleet-quantity">Subcontractors</span>
+                            <p>Extended network for maximum coverage capacity</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Area Section -->
     <section class="service-area">
         <div class="container">
             <div class="section-header">
@@ -139,15 +171,15 @@
             <div class="area-content">
                 <div class="area-info">
                     <h3>Based in Chetek, Wisconsin</h3>
-                    <p>We provide agricultural drone services throughout Wisconsin and Minnesota. Our strategic location allows us to serve farms efficiently across both states.</p>
+                    <p>We provide agricultural drone services throughout Wisconsin and Minnesota. Our strategic location and experienced team of pilots allow us to serve farms efficiently across both states.</p>
                     <p><strong>Service radius:</strong> Contact us to confirm coverage for your location</p>
+                    <p><strong>Our team:</strong> 2 Certified Crop Advisors + 3 experienced subcontractor pilots</p>
                     <p><strong>Typical response time:</strong> 24-48 hours for quote requests</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quote Request Section -->
     <section id="quote" class="quote-section">
         <div class="container">
             <div class="section-header">
@@ -169,7 +201,7 @@
                         <li>✓ Weather monitoring included</li>
                     </ul>
                 </div>
-                <form class="quote-form" id="quoteForm">
+                <form class="quote-form" id="quoteForm" action="YOUR_GOOGLE_SCRIPT_URL" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
@@ -183,7 +215,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="_replyto" required>
                         </div>
                         <div class="form-group">
                             <label for="acres">Estimated Acreage *</label>
@@ -265,7 +297,6 @@
         </div>
     </section>
 
-    <!-- Tar Spot Risk Map Section -->
     <section class="tar-spot-map">
         <div class="container">
             <div class="section-header">
@@ -301,7 +332,6 @@
                     </div>
                 </div>
                 <div class="map-embed">
-                    <!-- EDDMapS Tar Spot Annual Progress Map -->
                     <iframe 
                         src="https://maps.eddmaps.org/annualprogress/index.cfm?sub=84963&l48=1&states=IA,OH,WI,FL&colors=ffffff,7bafde,f7f055,f7cb45,caaccb,cccccc&neg=1&showhistory=1&countries=us,ca&logo=cpn" 
                         frameborder="0" 
@@ -323,7 +353,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -342,12 +371,25 @@
                         <p>Wisconsin & Minnesota</p>
                     </div>
                     <div class="contact-item">
+                        <strong>Certified Crop Advisors:</strong>
+                        <div class="cca-contacts">
+                            <div class="cca-person">
+                                <p><strong>Sigurd R. Lindquist</strong>, CCA 813089</p>
+                                <p><a href="tel:+17157972428">(715) 797-2428</a></p>
+                            </div>
+                            <div class="cca-person">
+                                <p><strong>Kevin J. Austin</strong>, CCA 736466</p>
+                                <p><a href="tel:+17156411239">(715) 641-1239</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
                         <strong>Email:</strong>
                         <p><a href="mailto:info@lokedrone.com">info@lokedrone.com</a></p>
                     </div>
                     <div class="contact-item">
-                        <strong>Phone:</strong>
-                        <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                        <strong>Our Team:</strong>
+                        <p>In addition to our certified crop advisors, we work with three experienced subcontractors to ensure fast, reliable service across our entire coverage area.</p>
                     </div>
                     <div class="contact-item">
                         <strong>Hours:</strong>
@@ -356,15 +398,15 @@
                 </div>
                 <div class="quick-contact">
                     <h3>Quick Contact</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" action="YOUR_GOOGLE_SCRIPT_URL" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="_replyto" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea rows="4" placeholder="Your Message" required></textarea>
+                            <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
@@ -373,7 +415,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -381,6 +422,10 @@
                     <img src="logo.png" alt="Loke Drone LC" class="footer-logo">
                     <h3>Loke Drone LC</h3>
                     <p>Professional Agricultural Drone Services</p>
+                    <div class="footer-affiliations">
+                        <p class="affiliations-title">Certified & Professional</p>
+                        <p>AAOC #23021A • FAA Part 107 Certified • CCA Licensed</p>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
