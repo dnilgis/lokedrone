@@ -252,7 +252,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.35;
+    opacity: 0.50;
 }
 
 .hero-background::before {
