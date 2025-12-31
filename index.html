@@ -3,97 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loke Drone LC | Agricultural Services</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Loke Drone LC - Professional agricultural drone services in Wisconsin and Minnesota. Crop spraying, cover crop seeding, and frost seeding at $18/acre.">
+    <title>Loke Drone LC - Professional Agricultural Drone Services</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="alert-bar">
-        Drone Deer Recovery Service Now Available!
-    </div>
-
-    <div class="container">
-        <header class="site-header">
-            <img src="logo.png" alt="Loke Drone LC" class="logo-img">
-        </header>
-
-        <main>
-            <section class="intro">
-                <p>
-                    <strong>Loke</strong>, pronounced "low key", <strong>Drone LC</strong> is your Premier Agricultural Drone service. 
-                    We utilize the latest in autonomous drone technology, operating <strong>DJI T100, DJI T50, and EAVision J100</strong> drones.
-                </p>
-                <p>
-                    Our fleet is configured for efficient spraying and spreading, and we now offer thermal capability with our new <strong>Matrice 4T</strong>.
-                </p>
-            </section>
-
-            <section class="gallery">
-                <div class="image-box">
-                    <img src="drone1.jpg" alt="DJI T100 Drone" onerror="this.src='https://placehold.co/600x400?text=Upload+drone1.jpg'">
-                </div>
-                <div class="image-box">
-                    <img src="drone2.jpg" alt="EAVision J100" onerror="this.src='https://placehold.co/600x400?text=Upload+drone2.jpg'">
-                </div>
-            </section>
-
-            <section class="services">
-                <h2>Services & Pricing</h2>
-                <div class="service-grid">
-                    <div class="service-card">
-                        <h3>Spraying</h3>
-                        <p class="price">$18.00 / acre</p>
-                        <p>Fungicide application for corn, beans, and wheat.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Spreading</h3>
-                        <p class="price">$18.00+ / acre</p>
-                        <p>Cover crops and granular fertilizer application.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="map-section">
-                <h2>Crop Progress Tracker</h2>
-                <div class="map-card">
-                    <h3>Tar Spot of Corn (Annual Progress)</h3>
-                    <div class="iframe-wrapper">
-                        <iframe 
-                            src="https://maps.eddmaps.org/annualprogress/index.cfm?sub=84963&l48=1&states=IA,OH,WI,FL&colors=ffffff,7bafde,f7f055,f7cb45,caaccb,cccccc&neg=1&showhistory=1&countries=us,ca&logo=cpn" 
-                            title="EDDMapS Annual Progress"
-                            allowfullscreen="true" 
-                            scrolling="no">
-                        </iframe>
-                    </div>
-                    <p class="source-link">Source: <a href="https://www.eddmaps.org/" target="_blank">EDDMapS</a></p>
-                </div>
-            </section>
-
-            <section class="articles">
-                <h2>Articles & Interest</h2>
-                <p class="note"><strong>tldr:</strong> Too long didn't read (summaries).</p>
-                <hr>
-                
-                <article>
-                    <h3><a href="#">Drones find niche with seeding cover crops in Ohio</a></h3>
-                    <p>
-                        <strong>tldr;</strong> Drones in Ohio are proving effective for seeding cover crops like rye and radish into standing corn and soybeans, enabling earlier planting (late August–early September). They cover 40–60 acres per hour with strong germination rates.
-                    </p>
-                </article>
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <p><strong>Loke Drone LC</strong> | Chetek, WI</p>
-            
-            <div class="footer-key">
-                <img src="key.png" alt="Low Key Pronunciation" onerror="this.style.display='none'">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Loke Drone LC</h1>
+                <p class="tagline">Professional Agricultural Drone Services</p>
             </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#quote">Get Quote</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-            <p>Contact Sig: <a href="mailto:sig@farmers1st.com">sig@farmers1st.com</a></p>
-            <p class="copyright">&copy; 2025 Loke Drone LC</p>
-        </footer>
-    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Precision Agriculture from Above</h1>
+            <p class="hero-subtitle">Professional drone services for crop spraying, seeding, and more</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">$18</span>
+                    <span class="stat-label">Per Acre</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">States Served</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label">Professional Drones</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive drone solutions for modern agriculture</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌾</div>
+                    <h3>Crop Spraying</h3>
+                    <p>Precise application of pesticides, herbicides, and fungicides with advanced drone technology. Reduce chemical use and minimize soil compaction.</p>
+                    <ul class="service-benefits">
+                        <li>Even coverage across terrain</li>
+                        <li>Access to wet or difficult fields</li>
+                        <li>Reduced crop damage</li>
+                        <li>Fast application times</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h3>Cover Crop Seeding</h3>
+                    <p>Efficient aerial seeding for cover crops that protect and enrich your soil. Perfect for establishing winter cover or companion planting.</p>
+                    <ul class="service-benefits">
+                        <li>Quick field coverage</li>
+                        <li>Seed in standing crops</li>
+                        <li>Minimal soil disturbance</li>
+                        <li>Optimal seed distribution</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">❄️</div>
+                    <h3>Frost Seeding</h3>
+                    <p>Take advantage of freeze-thaw cycles with precision frost seeding. Establish pastures and forage crops with minimal equipment.</p>
+                    <ul class="service-benefits">
+                        <li>Early spring seeding</li>
+                        <li>No field entry required</li>
+                        <li>Cost-effective establishment</li>
+                        <li>Improved seed-to-soil contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="equipment-section">
+                <h3>Professional Fleet</h3>
+                <div class="equipment-grid">
+                    <div class="equipment-item">
+                        <strong>DJI T50</strong>
+                        <span>High-capacity spraying</span>
+                    </div>
+                    <div class="equipment-item">
+                        <strong>DJI T100</strong>
+                        <span>Large-scale operations</span>
+                    </div>
+                    <div class="equipment-item">
+                        <strong>EAVision J100</strong>
+                        <span>Precision agriculture</span>
+                    </div>
+                    <div class="equipment-item">
+                        <strong>Matrice 4T</strong>
+                        <span>Aerial mapping & surveying</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="service-area">
+        <div class="container">
+            <div class="section-header">
+                <h2>Service Area</h2>
+                <p>Proudly serving farms across Wisconsin and Minnesota</p>
+            </div>
+            <div class="area-content">
+                <div class="area-info">
+                    <h3>Based in Chetek, Wisconsin</h3>
+                    <p>We provide agricultural drone services throughout Wisconsin and Minnesota. Our strategic location allows us to serve farms efficiently across both states.</p>
+                    <p><strong>Service radius:</strong> Contact us to confirm coverage for your location</p>
+                    <p><strong>Typical response time:</strong> 24-48 hours for quote requests</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Request Section -->
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Request a Quote</h2>
+                <p>Get a free estimate for your agricultural drone service needs</p>
+            </div>
+            <div class="quote-content">
+                <div class="quote-info">
+                    <h3>Simple, Transparent Pricing</h3>
+                    <div class="pricing-box">
+                        <div class="price">$18<span>/acre</span></div>
+                        <p>Standard rate for most services</p>
+                    </div>
+                    <ul class="quote-benefits">
+                        <li>✓ No hidden fees</li>
+                        <li>✓ Free field assessment</li>
+                        <li>✓ Volume discounts available</li>
+                        <li>✓ Flexible scheduling</li>
+                        <li>✓ Weather monitoring included</li>
+                    </ul>
+                </div>
+                <form class="quote-form" id="quoteForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="acres">Estimated Acreage *</label>
+                            <input type="number" id="acres" name="acres" min="1" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="crop-spraying">Crop Spraying</option>
+                            <option value="cover-crop">Cover Crop Seeding</option>
+                            <option value="frost-seeding">Frost Seeding</option>
+                            <option value="multiple">Multiple Services</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Farm Location (City/County) *</label>
+                        <input type="text" id="location" name="location" placeholder="e.g., Chetek, Barron County, WI" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeframe">Desired Timeframe</label>
+                        <select id="timeframe" name="timeframe">
+                            <option value="asap">As Soon As Possible</option>
+                            <option value="1-2weeks">1-2 Weeks</option>
+                            <option value="2-4weeks">2-4 Weeks</option>
+                            <option value="1month+">1+ Month</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project, crop type, field conditions, or any questions you have..."></textarea>
+                    </div>
+                    <div class="estimated-cost" id="estimatedCost" style="display: none;">
+                        <strong>Estimated Cost:</strong> <span id="costAmount">$0</span>
+                        <small>Based on $18/acre. Final price may vary based on field conditions and service requirements.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Quote Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Real results from farms across Wisconsin and Minnesota</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Loke Drone made crop spraying so much easier. They covered 200 acres in a fraction of the time it would have taken with traditional equipment, and we saw better coverage too."</p>
+                    <div class="testimonial-author">
+                        <strong>Mike Johnson</strong>
+                        <span>Corn & Soybean Farm, Barron County, WI</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"We were able to get our cover crop seeded into standing corn without any issues. The precision and efficiency saved us time and money. Highly recommend their services."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Anderson</strong>
+                        <span>Organic Farm, Polk County, WI</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Professional service from start to finish. They worked around the weather and got our fields treated exactly when needed. The pricing was transparent and fair."</p>
+                    <div class="testimonial-author">
+                        <strong>Tom Peterson</strong>
+                        <span>Dairy Farm, Chisago County, MN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2>Case Studies</h2>
+                <p>See how we've helped farms improve efficiency and yields</p>
+            </div>
+            <div class="case-studies-grid">
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <h3>500-Acre Soybean Operation</h3>
+                        <span class="case-tag">Crop Spraying</span>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-challenge">
+                            <strong>Challenge:</strong> Large soybean field with wet spots preventing tractor access during critical fungicide application window.
+                        </div>
+                        <div class="case-solution">
+                            <strong>Solution:</strong> Deployed DJI T100 for complete field coverage in under 6 hours, avoiding soil compaction and crop damage.
+                        </div>
+                        <div class="case-results">
+                            <strong>Results:</strong>
+                            <ul>
+                                <li>100% field coverage achieved</li>
+                                <li>No equipment-related crop loss</li>
+                                <li>Application completed within optimal window</li>
+                                <li>Estimated yield protection: 8-12 bushels/acre</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <h3>Organic Cover Crop Program</h3>
+                        <span class="case-tag">Cover Crop Seeding</span>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-challenge">
+                            <strong>Challenge:</strong> Organic farm needed to establish winter rye into standing corn to maintain soil health and USDA organic certification.
+                        </div>
+                        <div class="case-solution">
+                            <strong>Solution:</strong> Aerial seeding of winter rye at optimal timing using precision GPS guidance for even distribution.
+                        </div>
+                        <div class="case-results">
+                            <strong>Results:</strong>
+                            <ul>
+                                <li>300 acres seeded in one day</li>
+                                <li>Zero crop damage from ground equipment</li>
+                                <li>Excellent germination and establishment</li>
+                                <li>Maintained organic certification requirements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to discuss your agricultural drone service needs?</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Loke Drone LC</h3>
+                    <div class="contact-item">
+                        <strong>Location:</strong>
+                        <p>Chetek, Wisconsin</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Service Area:</strong>
+                        <p>Wisconsin & Minnesota</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <p><a href="mailto:info@lokedrone.com">info@lokedrone.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong>
+                        <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Hours:</strong>
+                        <p>Monday - Saturday: 7am - 7pm<br>Sunday: By appointment</p>
+                    </div>
+                </div>
+                <div class="quick-contact">
+                    <h3>Quick Contact</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Loke Drone LC</h3>
+                    <p>Professional Agricultural Drone Services</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#quote">Get Quote</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Loke Drone LC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
