@@ -9,47 +9,61 @@ if (mobileMenuToggle) {
 }
 
 const logoTrigger = document.getElementById('logoTrigger');
-const asciiDrone = document.getElementById('asciiDrone');
-const cornStalks = document.querySelectorAll('.corn-stalk');
+const droneAnimation = document.getElementById('droneAnimation');
+const cornField = document.getElementById('cornField');
 const navbar = document.querySelector('.navbar');
-let droneFlying = false;
+let animationActive = false;
 
-if (logoTrigger && asciiDrone) {
+function generateCornField() {
+    cornField.innerHTML = '';
+    for (let i = 0; i < 20; i++) {
+        const cornPlant = document.createElement('div');
+        cornPlant.className = 'corn-plant sick';
+        cornPlant.dataset.index = i;
+        cornPlant.innerHTML = `
+            <div class="corn-stalk"></div>
+            <div class="corn-leaves"></div>
+        `;
+        cornField.appendChild(cornPlant);
+    }
+}
+
+generateCornField();
+
+if (logoTrigger && droneAnimation) {
     logoTrigger.addEventListener('mouseenter', () => {
-        if (!droneFlying) {
-            droneFlying = true;
-            asciiDrone.classList.add('active');
+        if (!animationActive) {
+            animationActive = true;
+            navbar.classList.add('active-animation');
+            droneAnimation.classList.add('active');
             
-            cornStalks.forEach((stalk, index) => {
-                stalk.classList.remove('healed');
-            });
+            const cornPlants = document.querySelectorAll('.corn-plant');
+            cornPlants.forEach(plant => plant.classList.remove('healthy'));
+            cornPlants.forEach(plant => plant.classList.add('sick'));
             
-            setTimeout(() => {
-                navbar.classList.add('healing');
-            }, 800);
-            
-            cornStalks.forEach((stalk, index) => {
-                const delay = index * 400;
+            cornPlants.forEach((plant, index) => {
+                const healDelay = index * 350;
                 setTimeout(() => {
-                    stalk.classList.add('healed');
-                }, delay);
+                    plant.classList.remove('sick');
+                    plant.classList.add('healthy');
+                }, healDelay);
             });
             
             setTimeout(() => {
-                asciiDrone.classList.remove('active');
-                droneFlying = false;
+                droneAnimation.classList.remove('active');
                 
                 setTimeout(() => {
-                    navbar.classList.remove('healing');
-                    cornStalks.forEach((stalk) => {
-                        stalk.classList.remove('healed');
+                    navbar.classList.remove('active-animation');
+                    cornPlants.forEach(plant => {
+                        plant.classList.remove('healthy');
+                        plant.classList.add('sick');
                     });
+                    animationActive = false;
                 }, 2000);
-            }, 6000);
+            }, 7000);
         }
     });
 }
-
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
