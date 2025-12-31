@@ -35,19 +35,22 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1>Precision Agriculture from Above</h1>
             <p class="hero-subtitle">Professional drone services for crop spraying, seeding, and more</p>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">$18</span>
-                    <span class="stat-label">Per Acre</span>
-                </div>
-                <div class="stat">
                     <span class="stat-number">2</span>
                     <span class="stat-label">States Served</span>
                 </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Acres Treated</span>
+                </div>
+                <div class="stat-divider"></div>
                 <div class="stat">
                     <span class="stat-number">4+</span>
                     <span class="stat-label">Professional Drones</span>
@@ -262,59 +265,59 @@
         </div>
     </section>
 
-    <!-- Case Studies Section -->
-    <section class="case-studies">
+    <!-- Tar Spot Risk Map Section -->
+    <section class="tar-spot-map">
         <div class="container">
             <div class="section-header">
-                <h2>Case Studies</h2>
-                <p>See how we've helped farms improve efficiency and yields</p>
+                <h2>Tar Spot Risk Map</h2>
+                <p>Monitor tar spot disease risk across Wisconsin and Minnesota</p>
             </div>
-            <div class="case-studies-grid">
-                <div class="case-study">
-                    <div class="case-study-header">
-                        <h3>500-Acre Soybean Operation</h3>
-                        <span class="case-tag">Crop Spraying</span>
+            <div class="map-container">
+                <div class="map-info">
+                    <div class="info-card">
+                        <h3>🌽 What is Tar Spot?</h3>
+                        <p>Tar spot is a fungal disease affecting corn crops across the Midwest. Early detection and treatment are critical to protecting yields.</p>
                     </div>
-                    <div class="case-study-content">
-                        <div class="case-challenge">
-                            <strong>Challenge:</strong> Large soybean field with wet spots preventing tractor access during critical fungicide application window.
-                        </div>
-                        <div class="case-solution">
-                            <strong>Solution:</strong> Deployed DJI T100 for complete field coverage in under 6 hours, avoiding soil compaction and crop damage.
-                        </div>
-                        <div class="case-results">
-                            <strong>Results:</strong>
-                            <ul>
-                                <li>100% field coverage achieved</li>
-                                <li>No equipment-related crop loss</li>
-                                <li>Application completed within optimal window</li>
-                                <li>Estimated yield protection: 8-12 bushels/acre</li>
-                            </ul>
+                    <div class="info-card">
+                        <h3>✈️ Our Solution</h3>
+                        <p>Drone spraying provides rapid, precise fungicide application to combat tar spot outbreaks before they spread.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📊 Risk Levels</h3>
+                        <div class="risk-legend">
+                            <div class="risk-item">
+                                <span class="risk-indicator high"></span>
+                                <span>High Risk</span>
+                            </div>
+                            <div class="risk-item">
+                                <span class="risk-indicator moderate"></span>
+                                <span>Moderate Risk</span>
+                            </div>
+                            <div class="risk-item">
+                                <span class="risk-indicator low"></span>
+                                <span>Low Risk</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="case-study">
-                    <div class="case-study-header">
-                        <h3>Organic Cover Crop Program</h3>
-                        <span class="case-tag">Cover Crop Seeding</span>
-                    </div>
-                    <div class="case-study-content">
-                        <div class="case-challenge">
-                            <strong>Challenge:</strong> Organic farm needed to establish winter rye into standing corn to maintain soil health and USDA organic certification.
-                        </div>
-                        <div class="case-solution">
-                            <strong>Solution:</strong> Aerial seeding of winter rye at optimal timing using precision GPS guidance for even distribution.
-                        </div>
-                        <div class="case-results">
-                            <strong>Results:</strong>
-                            <ul>
-                                <li>300 acres seeded in one day</li>
-                                <li>Zero crop damage from ground equipment</li>
-                                <li>Excellent germination and establishment</li>
-                                <li>Maintained organic certification requirements</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="map-embed">
+                    <!-- EDDMapS Tar Spot Annual Progress Map -->
+                    <iframe 
+                        src="https://maps.eddmaps.org/annualprogress/index.cfm?sub=84963&l48=1&states=IA,OH,WI,FL&colors=ffffff,7bafde,f7f055,f7cb45,caaccb,cccccc&neg=1&showhistory=1&countries=us,ca&logo=cpn" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        webkitallowfullscreen="true" 
+                        mozallowfullscreen="true" 
+                        scrolling="no"
+                        title="Tar Spot Disease Progress Map">
+                    </iframe>
+                </div>
+            </div>
+            <div class="map-cta">
+                <div class="cta-content">
+                    <h3>Protect Your Corn Crop from Tar Spot</h3>
+                    <p>Our drone spraying services provide fast, effective fungicide application to combat tar spot disease. Get a quote today.</p>
+                    <a href="#quote" class="btn btn-primary">Get Treatment Quote</a>
                 </div>
             </div>
         </div>
