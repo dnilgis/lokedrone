@@ -15,6 +15,10 @@ const navbar = document.querySelector('.navbar');
 let animationActive = false;
 
 function generateCornField() {
+    if (!cornField) {
+        console.error('Corn field element not found!');
+        return;
+    }
     cornField.innerHTML = '';
     for (let i = 0; i < 20; i++) {
         const cornPlant = document.createElement('div');
@@ -26,18 +30,23 @@ function generateCornField() {
         `;
         cornField.appendChild(cornPlant);
     }
+    console.log('Corn field generated with', cornField.children.length, 'plants');
 }
 
 generateCornField();
 
 if (logoTrigger && droneAnimation) {
+    console.log('Easter egg initialized!');
     logoTrigger.addEventListener('mouseenter', () => {
+        console.log('Logo hovered!');
         if (!animationActive) {
+            console.log('Starting animation...');
             animationActive = true;
             navbar.classList.add('active-animation');
             droneAnimation.classList.add('active');
             
             const cornPlants = document.querySelectorAll('.corn-plant');
+            console.log('Found', cornPlants.length, 'corn plants');
             cornPlants.forEach(plant => plant.classList.remove('healthy'));
             cornPlants.forEach(plant => plant.classList.add('sick'));
             
@@ -63,6 +72,8 @@ if (logoTrigger && droneAnimation) {
             }, 7000);
         }
     });
+} else {
+    console.error('Logo trigger or drone animation not found!', {logoTrigger, droneAnimation});
 }
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
@@ -89,53 +100,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const acresInput = document.getElementById('acres');
-const estimatedCostDiv = document.getElementById('estimatedCost');
-const costAmountSpan = document.getElementById('costAmount');
-const pricePerAcre = 18;
-
-if (acresInput && estimatedCostDiv && costAmountSpan) {
-    acresInput.addEventListener('input', () => {
-        const acres = parseFloat(acresInput.value);
-        if (acres && acres > 0) {
-            const totalCost = acres * pricePerAcre;
-            costAmountSpan.textContent = `$${totalCost.toFixed(2)}`;
-            estimatedCostDiv.style.display = 'block';
-        } else {
-            estimatedCostDiv.style.display = 'none';
-        }
-    });
-}
-
-const quoteForm = document.getElementById('quoteForm');
-if (quoteForm) {
-    quoteForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        
-        const formData = {
-            name: document.getElementById('name').value,
-            phone: document.getElementById('phone').value,
-            email: document.getElementById('email').value,
-            acres: document.getElementById('acres').value,
-            service: document.getElementById('service').value,
-            location: document.getElementById('location').value,
-            timeframe: document.getElementById('timeframe').value,
-            message: document.getElementById('message').value
-        };
-        
-        
-        
-        console.log('Quote request submitted:', formData);
-        
-        
-        showSuccessMessage(quoteForm, 'Thank you! We\'ve received your quote request and will contact you within 24 hours.');
-        
-        
-        quoteForm.reset();
-        estimatedCostDiv.style.display = 'none';
-    });
-}
 
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
