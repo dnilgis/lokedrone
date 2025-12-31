@@ -150,6 +150,42 @@ section {
     overflow: hidden;
 }
 
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-brand .logo {
+    height: 50px;
+    transition: height 0.3s ease;
+}
+
+.nav-menu {
+    display: flex !important;
+    list-style: none !important;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    flex-direction: row !important;
+}
+
+.nav-menu li {
+    list-style: none !important;
+}
+
+.nav-menu a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
 .nav-menu a::after {
     content: '';
     position: absolute;
@@ -169,6 +205,14 @@ section {
     width: 100%;
 }
 
+.navbar.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.12);
+}
+
+.navbar.scrolled .logo {
+    height: 40px;
+}
 
 .mobile-menu-toggle {
     display: none;
@@ -208,7 +252,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.15;
+    opacity: 0.35;
 }
 
 .hero-background::before {
