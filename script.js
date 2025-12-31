@@ -10,6 +10,8 @@ if (mobileMenuToggle) {
 
 const logoTrigger = document.getElementById('logoTrigger');
 const asciiDrone = document.getElementById('asciiDrone');
+const cornStalks = document.querySelectorAll('.corn-stalk');
+const navbar = document.querySelector('.navbar');
 let droneFlying = false;
 
 if (logoTrigger && asciiDrone) {
@@ -18,10 +20,32 @@ if (logoTrigger && asciiDrone) {
             droneFlying = true;
             asciiDrone.classList.add('active');
             
+            cornStalks.forEach((stalk, index) => {
+                stalk.classList.remove('healed');
+            });
+            
+            setTimeout(() => {
+                navbar.classList.add('healing');
+            }, 800);
+            
+            cornStalks.forEach((stalk, index) => {
+                const delay = index * 400;
+                setTimeout(() => {
+                    stalk.classList.add('healed');
+                }, delay);
+            });
+            
             setTimeout(() => {
                 asciiDrone.classList.remove('active');
                 droneFlying = false;
-            }, 3000);
+                
+                setTimeout(() => {
+                    navbar.classList.remove('healing');
+                    cornStalks.forEach((stalk) => {
+                        stalk.classList.remove('healed');
+                    });
+                }, 2000);
+            }, 6000);
         }
     });
 }
