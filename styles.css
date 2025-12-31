@@ -252,7 +252,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.50;
+    opacity: 0.35;
 }
 
 .hero-background::before {
@@ -1174,14 +1174,17 @@ section {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 50px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .contact-info {
     background: var(--bg-light);
     padding: 40px;
     border-radius: 10px;
+    border: 2px solid var(--primary-color);
 }
 
 .contact-info h3 {
