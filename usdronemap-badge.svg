@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <defs>
+    <linearGradient id="pinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#ea580c"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="200" height="50" rx="6" fill="#0f172a"/>
+  <rect x="1" y="1" width="198" height="48" rx="5" fill="none" stroke="#f97316" stroke-width="1.5"/>
+  
+  <!-- Map pin with checkmark -->
+  <g transform="translate(10, 5)">
+    <!-- Pin shape -->
+    <path d="M15 0C6.7 0 0 6.7 0 15c0 11.2 15 27 15 27s15-15.8 15-27c0-8.3-6.7-15-15-15z" fill="url(#pinGrad)"/>
+    <!-- Checkmark inside -->
+    <path d="M8 15 L13 20 L22 10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="52" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#64748b" letter-spacing="0.5">VERIFIED ON</text>
+  <text x="52" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">US Drone Map</text>
+</svg>
