@@ -96,7 +96,7 @@
         {
           "@type": "Question",
           "name": "How much does drone spraying cost in Wisconsin?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Our pricing starts at $400 minimum per job, with most applications running $7–$11 per acre depending on crop type, product, and field conditions. Contact us for a free estimate based on your specific acreage and application needs."}
+          "acceptedAnswer": {"@type": "Answer", "text": "Our rates are published: fields up to 100 acres are $18/acre, 101–199 acres are $17/acre, and 200–499 acres are $16/acre. Jobs over 500 acres, call us for custom pricing. A $400 minimum applies to all jobs. Final price may vary based on product used, field conditions, and travel distance."}
         },
         {
           "@type": "Question",
@@ -1764,7 +1764,235 @@ section { padding: 96px 40px; }
     .compare-table-wrap { margin: 0 -16px; padding: 0 16px; }
 }
 
-/* Mobile nav open state */
+/* ============================================
+   PRICING TABLE
+   ============================================ */
+.pricing { background: var(--cream-0); border-top: 1px solid var(--cream-2); }
+
+.pricing-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.pricing-desc {
+    font-size: 1rem;
+    color: var(--text-dim);
+    font-weight: 300;
+    line-height: 1.8;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.pricing-note {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: var(--orange-dim);
+    border: 1px solid var(--border-orange);
+    border-left: 3px solid var(--orange);
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    font-weight: 300;
+    line-height: 1.65;
+}
+
+.pricing-table-wrap {
+    background: #fff;
+    border: 1px solid var(--cream-2);
+    border-top: 3px solid var(--orange);
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-table thead th {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    padding: 14px 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--cream-2);
+    background: var(--cream-1);
+}
+
+.pricing-table thead th:not(:first-child) { text-align: right; }
+
+.pricing-table tbody tr {
+    border-bottom: 1px solid var(--cream-2);
+    transition: background 0.2s;
+}
+
+.pricing-table tbody tr:hover { background: var(--cream-1); }
+.pricing-table tbody tr:last-child { border-bottom: none; }
+
+.pricing-table td {
+    padding: 20px 24px;
+    vertical-align: middle;
+}
+
+.pricing-table td:not(:first-child) { text-align: right; }
+
+.tier-label {
+    display: block;
+    font-family: var(--font-d);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text);
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.tier-range {
+    display: block;
+    font-family: var(--font-m);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.tier-rate {
+    font-family: var(--font-d);
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1;
+}
+
+.per-ac {
+    font-family: var(--font-m);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-left: 2px;
+}
+
+.tier-example {
+    font-family: var(--font-m);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.tier-total {
+    font-family: var(--font-d);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dim);
+}
+
+/* Featured row */
+.tier-featured { background: var(--orange-dim) !important; }
+.tier-featured:hover { background: rgba(224,77,10,0.08) !important; }
+.tier-featured .tier-label { color: var(--orange); }
+.tier-featured .tier-rate { color: var(--orange); }
+.tier-featured .tier-total { color: var(--orange); }
+
+.popular-tag {
+    display: inline-block;
+    font-family: var(--font-m);
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--orange);
+    color: #fff;
+    padding: 2px 7px;
+    margin-left: 8px;
+    vertical-align: middle;
+    font-weight: 400;
+}
+
+/* Call row */
+.tier-call { background: var(--slate-0) !important; }
+.tier-call:hover { background: var(--slate-1) !important; }
+.tier-call .tier-label { color: var(--text-inv); }
+.tier-call .tier-range { color: var(--text-inv-muted); }
+.tier-call-rate {
+    font-family: var(--font-d);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-inv) !important;
+}
+
+.tier-call-link {
+    font-family: var(--font-m);
+    font-size: 0.8rem;
+    color: var(--orange);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+}
+
+.tier-call-link:hover { color: var(--orange-light); text-decoration: underline; }
+
+.pricing-footnote {
+    padding: 16px 24px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--cream-2);
+    line-height: 1.65;
+    background: var(--cream-1);
+}
+
+.pricing-footnote strong { color: var(--text-dim); }
+
+.pricing-cta-row {
+    display: flex;
+    gap: 12px;
+    padding: 20px 24px;
+    border-top: 1px solid var(--cream-2);
+    align-items: center;
+}
+
+.pricing-cta-btn {
+    font-family: var(--font-b);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 13px 28px;
+    background: var(--orange);
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s;
+    display: inline-block;
+}
+
+.pricing-cta-btn:hover { background: var(--orange-light); }
+
+.pricing-cta-call {
+    font-family: var(--font-b);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dim);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.pricing-cta-call svg { width: 16px; height: 16px; }
+.pricing-cta-call:hover { color: var(--orange); }
+
+@media (max-width: 1000px) {
+    .pricing-layout { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (max-width: 640px) {
+    .pricing-table thead th:nth-child(3),
+    .pricing-table td:nth-child(3) { display: none; }
+    .pricing-cta-row { flex-direction: column; align-items: flex-start; }
+}
+
+/* ============================================
+   END PRICING CSS
+   ============================================ */
 .navbar.nav-open .nav-links {
     display: flex;
     position: fixed;
@@ -1814,6 +2042,7 @@ section { padding: 96px 40px; }
         <li><a href="#services">Services</a></li>
         <li><a href="#fleet">Fleet</a></li>
         <li><a href="#coverage">Coverage</a></li>
+        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
@@ -2361,6 +2590,89 @@ section { padding: 96px 40px; }
 </section>
 
 <!-- ============================================
+     PRICING TABLE
+     ============================================ -->
+<section class="pricing on-light" id="pricing" aria-labelledby="pricing-heading">
+    <div class="container">
+        <div class="pricing-layout">
+            <div class="pricing-intro">
+                <div class="section-label">Transparent Pricing</div>
+                <h2 class="section-title" id="pricing-heading">What to<br>Expect</h2>
+                <p class="pricing-desc">We publish our rates because we believe farmers deserve straight answers before they pick up the phone. No bait-and-switch, no "call for pricing" on work we do every week.</p>
+                <div class="pricing-note" role="note">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px;flex-shrink:0;color:var(--orange);margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span>Final pricing may vary based on product used, field conditions, and travel distance. Pricing shown is for application service only — product costs are separate unless otherwise arranged.</span>
+                </div>
+            </div>
+
+            <div class="pricing-table-wrap">
+                <table class="pricing-table" aria-label="Application pricing by acreage">
+                    <thead>
+                        <tr>
+                            <th scope="col">Acres</th>
+                            <th scope="col">Rate per Acre</th>
+                            <th scope="col">Example Job</th>
+                            <th scope="col">Est. Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="tier-label">Small Fields</span>
+                                <span class="tier-range">1 – 100 acres</span>
+                            </td>
+                            <td class="tier-rate">$18<span class="per-ac">/acre</span></td>
+                            <td class="tier-example">80 acres</td>
+                            <td class="tier-total">$1,440</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="tier-label">Mid-Size</span>
+                                <span class="tier-range">101 – 199 acres</span>
+                            </td>
+                            <td class="tier-rate">$17<span class="per-ac">/acre</span></td>
+                            <td class="tier-example">150 acres</td>
+                            <td class="tier-total">$2,550</td>
+                        </tr>
+                        <tr class="tier-featured" aria-label="Most popular tier">
+                            <td>
+                                <span class="tier-label">Large Fields <span class="popular-tag">Most Common</span></span>
+                                <span class="tier-range">200 – 499 acres</span>
+                            </td>
+                            <td class="tier-rate">$16<span class="per-ac">/acre</span></td>
+                            <td class="tier-example">300 acres</td>
+                            <td class="tier-total">$4,800</td>
+                        </tr>
+                        <tr class="tier-call">
+                            <td>
+                                <span class="tier-label">High Volume</span>
+                                <span class="tier-range">500+ acres</span>
+                            </td>
+                            <td class="tier-rate tier-call-rate">Call Us</td>
+                            <td class="tier-example" colspan="2">
+                                <a href="tel:+17157972428" class="tier-call-link" aria-label="Call for pricing on jobs over 500 acres">(715) 797-2428 — Sig &nbsp;·&nbsp; (715) 641-1239 — Kevin</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pricing-footnote" role="note">
+                    * A <strong>$400 minimum charge</strong> applies to all jobs regardless of acreage. Multi-application season agreements and neighboring farm bundling available — ask when you call.
+                </div>
+
+                <div class="pricing-cta-row">
+                    <a href="#contact" class="pricing-cta-btn">Request a Quote</a>
+                    <a href="tel:+17157972428" class="pricing-cta-call">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6.06 6.06l.98-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call (715) 797-2428
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
      FAQ
      ============================================ -->
 <section class="faq on-cream" id="faq" aria-labelledby="faq-heading">
@@ -2389,7 +2701,7 @@ section { padding: 96px 40px; }
                         </span>
                     </button>
                     <div class="faq-a" id="faq-a-1" role="region">
-                        <div class="faq-a-inner">Pricing starts at a $400 job minimum, with most applications running $7–$11 per acre depending on crop type, product used, and field conditions. We'll give you a clear, itemized quote before any work begins — no hidden fees or surprises. Use our calculator above for an instant ballpark estimate.</div>
+                        <div class="faq-a-inner">Our rates are published on this page. Fields up to 100 acres are $18/acre. Fields of 101–199 acres are $17/acre. Fields of 200–499 acres are $16/acre. For jobs over 500 acres, call us directly for custom pricing. A $400 minimum applies to all jobs. We'll give you a clear, itemized quote before any work begins — no hidden fees or surprises. Use our calculator above for an instant estimate based on your acreage.</div>
                     </div>
                 </div>
 
@@ -2817,14 +3129,13 @@ document.querySelectorAll('.faq-item').forEach(item => {
 /* ============================================
    QUOTE CALCULATOR
    ============================================ */
-const ACRE_RATES = {
-    corn:    { low: 7, high: 10 },
-    soy:     { low: 7, high: 10 },
-    wheat:   { low: 6, high: 9  },
-    alfalfa: { low: 8, high: 11 },
-    other:   { low: 7, high: 11 },
-    default: { low: 7, high: 11 },
-};
+// Pricing tiers: 0-100 = $18, 101-199 = $17, 200-499 = $16, 500+ = call
+function getAcreRate(acres) {
+    if (acres <= 100)  return { rate: 18, tier: '0–100 acres' };
+    if (acres <= 199)  return { rate: 17, tier: '101–199 acres' };
+    if (acres <= 499)  return { rate: 16, tier: '200–499 acres' };
+    return { rate: null, tier: '500+ acres' }; // call for pricing
+}
 
 const COVERAGE_AC_HR = {
     fungicide: 32, herbicide: 30, insecticide: 30,
@@ -2833,7 +3144,6 @@ const COVERAGE_AC_HR = {
 
 function calculateQuote() {
     const acres = parseInt(document.getElementById('acres').value);
-    const crop = document.getElementById('cropType').value || 'default';
     const app = document.getElementById('appType').value || 'default';
     const county = document.getElementById('county').value.trim();
 
@@ -2842,27 +3152,38 @@ function calculateQuote() {
         return;
     }
 
-    const rate = ACRE_RATES[crop] || ACRE_RATES.default;
     const acPerHr = COVERAGE_AC_HR[app] || COVERAGE_AC_HR.default;
-    const low = Math.max(400, Math.round(acres * rate.low));
-    const high = Math.max(400, Math.round(acres * rate.high));
     const hours = (acres / acPerHr).toFixed(1);
+    const { rate, tier } = getAcreRate(acres);
 
     document.getElementById('hoursResult').textContent = hours;
-    document.getElementById('costResult').textContent = '$' + low.toLocaleString() + '–$' + high.toLocaleString();
 
-    let note = 'Estimate for ' + acres.toLocaleString() + ' acres';
-    if (county) note += ' in ' + county;
-    note += '. Actual price depends on product, field conditions, and mobilization distance. $400 minimum per job. Call to confirm.';
-    document.getElementById('resultNote').textContent = note;
+    if (rate === null) {
+        // 500+ acres — prompt to call
+        document.getElementById('costResult').textContent = 'Call Us';
+        document.getElementById('costResult').style.fontSize = '1.3rem';
+        let note = 'Your job (' + acres.toLocaleString() + ' acres) qualifies for our best available pricing.';
+        if (county) note += ' Location: ' + county + '.';
+        note += ' Call Sig or Kevin directly for a custom quote on jobs over 500 acres.';
+        document.getElementById('resultNote').textContent = note;
+        document.getElementById('toEmailBtn').style.display = 'none';
+    } else {
+        const total = Math.max(400, acres * rate);
+        document.getElementById('costResult').textContent = '$' + total.toLocaleString();
+        document.getElementById('costResult').style.fontSize = '2rem';
+        let note = acres.toLocaleString() + ' acres × $' + rate + '/acre (' + tier + ')';
+        if (county) note += ' · ' + county;
+        if (total === 400) note += ' · $400 minimum applies';
+        note += '. Price may vary based on product, field conditions, and travel. Call to confirm.';
+        document.getElementById('resultNote').textContent = note;
+        document.getElementById('toEmailBtn').style.display = 'block';
+    }
 
     document.getElementById('calcResult').classList.add('visible');
-    document.getElementById('toEmailBtn').style.display = 'block';
     document.getElementById('calcBtn').textContent = 'Recalculate';
 
-    // GA event
     if (typeof gtag !== 'undefined') {
-        gtag('event', 'quote_calculated', { event_category: 'calculator', event_label: crop + '-' + app, value: Math.round((low + high) / 2) });
+        gtag('event', 'quote_calculated', { event_category: 'calculator', event_label: tier, value: rate ? Math.max(400, acres * rate) : 0 });
     }
 }
 
