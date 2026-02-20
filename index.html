@@ -3,347 +3,2951 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Loke Drone LC | Drone Ag Spraying & Thermal Recovery | Chetek, WI</title>
-    <meta name="description" content="Professional agricultural drone services in Wisconsin & Minnesota. We specialize in fungicide application, frost seeding, and thermal deer recovery. Based in Chetek, WI.">
-    <meta name="keywords" content="drone spraying, ag drone services, thermal deer recovery, frost seeding, fungicide application, Chetek WI, Wisconsin drone pilot">
+    <title>Loke Drone LC | Agricultural Drone Spraying Wisconsin & Minnesota | Chetek, WI</title>
+    <meta name="description" content="Professional agricultural drone services in Wisconsin and Minnesota. Crop spraying, cover crop seeding, frost seeding, and thermal deer recovery. FAA licensed, CCA certified. Based in Chetek, WI. Call (715) 797-2428.">
+    <meta name="keywords" content="agricultural drone spraying Wisconsin, ag drone services Minnesota, drone fungicide application, cover crop seeding drone, frost seeding Wisconsin, thermal deer recovery drone, Chetek WI drone pilot, Barron County drone spraying, drone crop application Wisconsin Minnesota">
     <link rel="canonical" href="https://lokedrone.com/">
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lokedrone.com/">
-    <meta property="og:title" content="Loke Drone LC | Precision Ag Services">
-    <meta property="og:description" content="Licensed drone services for farmers and hunters. Spraying, seeding, and thermal recovery.">
+    <meta property="og:title" content="Loke Drone LC | Precision Ag Drone Services | Wisconsin & Minnesota">
+    <meta property="og:description" content="FAA-licensed, CCA-certified drone services for Wisconsin and Minnesota farms. Spraying, seeding, and thermal recovery. Call (715) 797-2428.">
     <meta property="og:image" content="https://lokedrone.com/hero-bg.jpg">
+    <meta property="og:locale" content="en_US">
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Loke Drone LC | Precision Ag Services">
-    <meta name="twitter:description" content="Licensed drone services for farmers and hunters. Spraying, seeding, and thermal recovery.">
+    <meta name="twitter:title" content="Loke Drone LC | Precision Ag Drone Services">
+    <meta name="twitter:description" content="FAA-licensed, CCA-certified drone services for Wisconsin and Minnesota farms.">
     <meta name="twitter:image" content="https://lokedrone.com/hero-bg.jpg">
-    <link rel="stylesheet" href="styles.css?v=2025-12-31">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Mono:wght@300;400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HG9KCG76F2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HG9KCG76F2');
+      // Track phone clicks
+      document.addEventListener('click', function(e) {
+          if (e.target.closest('a[href^="tel:"]')) {
+              gtag('event', 'phone_click', { event_category: 'contact', event_label: e.target.closest('a').href });
+          }
+      });
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Loke Drone LC",
+      "description": "Professional agricultural drone services including crop spraying, cover crop seeding, frost seeding, and thermal deer recovery in Wisconsin and Minnesota.",
+      "url": "https://lokedrone.com",
+      "telephone": "+17157972428",
+      "email": "info@lokedrone.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PO Box 243",
+        "addressLocality": "Chetek",
+        "addressRegion": "WI",
+        "postalCode": "54728",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.3183,
+        "longitude": -91.6546
+      },
+      "areaServed": [
+        {"@type": "State", "name": "Wisconsin"},
+        {"@type": "State", "name": "Minnesota"}
+      ],
+      "openingHours": "Mo-Sa 07:00-20:00",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Agricultural Drone Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Crop Spraying", "description": "Aerial application of fungicides, herbicides, and pesticides"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cover Crop Seeding", "description": "Aerial seeding of cover crops into standing crops"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Frost Seeding", "description": "Early spring aerial seeding using freeze-thaw cycles"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Thermal Deer Recovery", "description": "Post-harvest thermal imaging deer recovery services"}}
+        ]
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does drone spraying cost in Wisconsin?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Our pricing starts at $400 minimum per job, with most applications running $7–$11 per acre depending on crop type, product, and field conditions. Contact us for a free estimate based on your specific acreage and application needs."}
+        },
+        {
+          "@type": "Question",
+          "name": "How many acres can your drones spray per hour?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Our DJI T50 units cover 30+ acres per hour, and our DJI T100 covers 55+ acres per hour in real-world field conditions. The exact rate depends on the application type, swath width, and field layout."}
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum acreage for drone spraying?",
+          "acceptedAnswer": {"@type": "Answer", "text": "We have a minimum job charge of $400. For smaller fields, we can often combine with neighboring farms in the same area to keep costs efficient. Call us to discuss your situation."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can drones spray in wet or muddy field conditions?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes — that is one of the biggest advantages of drone spraying. Because our aircraft never enter the field, we can apply when ground equipment would cause compaction or get stuck. We can treat your crop at the optimal timing window regardless of field conditions."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do your pilots have crop advisory certifications?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both of our lead pilots are Certified Crop Advisors (CCA). Sigurd Lindquist holds CCA #813089 and Kevin Austin holds CCA #736466. This means we advise on proper application rates, product selection, and timing — not just fly the drone."}
+        },
+        {
+          "@type": "Question",
+          "name": "What is frost seeding and when should it be done?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Frost seeding is an early spring technique that uses freeze-thaw soil cycles to work seed into the ground without tillage or equipment entry. It is typically done in late February through March in Wisconsin and Minnesota, depending on conditions. Drone frost seeding eliminates the need for any ground equipment in the field."}
+        },
+        {
+          "@type": "Question",
+          "name": "What is thermal deer recovery and how does it work?",
+          "acceptedAnswer": {"@type": "Answer", "text": "After the hunting season, we fly our Matrice 4T thermal camera drone to locate harvested deer that could not be recovered on foot. The thermal camera detects heat signatures that are invisible to the naked eye. We also assist with lost livestock and pet searches."}
+        }
+      ]
+    }
+    </script>
+
+    <style>
+/* ============================================
+   BASE RESET & ROOT
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --cream-0: #f7f5f0;
+    --cream-1: #f0ede6;
+    --cream-2: #e6e2d8;
+    --cream-3: #cec9ba;
+    --slate-0: #2a2e38;
+    --slate-1: #323743;
+    --slate-2: #3c4150;
+    --slate-3: #464c5c;
+    --orange: #e04d0a;
+    --orange-light: #f06020;
+    --orange-dim: rgba(224,77,10,0.1);
+    --orange-glow: rgba(224,77,10,0.25);
+    --green: #3a7d28;
+    --green-light: #4a9a34;
+    --green-dim: rgba(58,125,40,0.1);
+    --text: #1a1d24;
+    --text-dim: #48505e;
+    --text-muted: #878d9c;
+    --text-inv: #e8eaf0;
+    --text-inv-dim: #9ca0b0;
+    --text-inv-muted: #5a5e6e;
+    --border-light: rgba(0,0,0,0.07);
+    --border-dark: rgba(255,255,255,0.07);
+    --border-orange: rgba(224,77,10,0.3);
+    --border-green: rgba(58,125,40,0.3);
+    --font-d: 'Barlow Condensed', sans-serif;
+    --font-b: 'Barlow', sans-serif;
+    --font-m: 'DM Mono', monospace;
+    --shadow-lg: 0 24px 64px rgba(0,0,0,0.18);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--cream-0);
+    color: var(--text);
+    font-family: var(--font-b);
+    font-size: 18px; /* larger for older farmers */
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ============================================
+   TOP BAR
+   ============================================ */
+.topbar {
+    background: var(--slate-0);
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-m);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+}
+
+.topbar-left {
+    color: var(--text-inv-muted);
+    text-transform: uppercase;
+}
+
+.topbar-right {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.topbar-phone {
+    color: var(--text-inv);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.topbar-phone:hover { color: var(--orange); }
+
+.topbar-phone svg { width: 13px; height: 13px; }
+
+.topbar-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--green-light);
+}
+
+.topbar-status::before {
+    content: '';
+    display: block;
+    width: 7px; height: 7px;
+    background: var(--green-light);
+    border-radius: 50%;
+    animation: blink 2.5s ease-in-out infinite;
+}
+
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+    position: sticky;
+    top: 0; z-index: 900;
+    padding: 0 40px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(247,245,240,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.09); border-bottom-color: var(--border-orange); }
+
+.nav-logo img { height: 40px; width: auto; }
+
+.nav-links { display: flex; list-style: none; gap: 36px; align-items: center; }
+
+.nav-links a {
+    font-family: var(--font-m);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    padding: 4px 0;
+}
+
+.nav-links a:hover { color: var(--orange); }
+
+.nav-phone {
+    font-family: var(--font-m);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-dim);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.nav-phone:hover { color: var(--orange); }
+
+.nav-phone svg { width: 14px; height: 14px; }
+
+.nav-cta {
+    font-family: var(--font-m);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #fff;
+    background: var(--orange);
+    padding: 11px 24px;
+    text-decoration: none;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.nav-cta:hover { background: var(--orange-light); }
+
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--text); transition: all 0.3s; }
+
+/* ============================================
+   HERO — dark slate
+   ============================================ */
+.hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 40px;
+    overflow: hidden;
+    background: var(--slate-0);
+}
+
+.hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center 35%;
+    opacity: 0.18;
+}
+
+.hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+        linear-gradient(rgba(224,77,10,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(224,77,10,0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    animation: gridDrift 28s linear infinite;
+}
+
+@keyframes gridDrift { from { background-position: 0 0; } to { background-position: 64px 64px; } }
+
+.hero-vignette {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 90% 90% at 50% 50%, transparent 15%, rgba(42,46,56,0.85) 100%);
+}
+
+.hero-corner { position: absolute; width: 60px; height: 60px; opacity: 0.3; }
+.hero-corner.tl { top: 90px; left: 40px; border-top: 1px solid var(--orange); border-left: 1px solid var(--orange); }
+.hero-corner.tr { top: 90px; right: 40px; border-top: 1px solid var(--orange); border-right: 1px solid var(--orange); }
+.hero-corner.bl { bottom: 48px; left: 40px; border-bottom: 1px solid var(--orange); border-left: 1px solid var(--orange); }
+.hero-corner.br { bottom: 48px; right: 40px; border-bottom: 1px solid var(--orange); border-right: 1px solid var(--orange); }
+
+.hero-inner {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto; width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    gap: 72px;
+    align-items: center;
+}
+
+.hero-tag {
+    font-family: var(--font-m);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 22px;
+    display: flex; align-items: center; gap: 14px;
+}
+
+.hero-tag::before { content: ''; display: block; width: 28px; height: 1px; background: var(--orange); }
+
+.hero h1 {
+    font-family: var(--font-d);
+    font-size: clamp(3.8rem, 6.5vw, 6.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--text-inv);
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+}
+
+.hero h1 em { font-style: normal; color: var(--orange); display: block; }
+
+.hero-desc {
+    font-size: 1.15rem;
+    color: var(--text-inv-dim);
+    line-height: 1.75;
+    margin-bottom: 44px;
+    max-width: 460px;
+    font-weight: 300;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.hstat-num {
+    font-family: var(--font-d);
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text-inv);
+    line-height: 1;
+}
+
+.hstat-label {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    color: var(--text-inv-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 5px;
+}
+
+.hero-trust {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.trust-chip {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 1px solid var(--border-dark);
+    color: var(--text-inv-muted);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.trust-chip.green-chip {
+    border-color: rgba(74,154,52,0.4);
+    color: var(--green-light);
+    background: rgba(58,125,40,0.08);
+}
+
+.trust-chip svg { width: 11px; height: 11px; flex-shrink: 0; }
+
+/* ============================================
+   CALC WIDGET
+   ============================================ */
+.calc-widget {
+    background: var(--cream-0);
+    border: 1px solid var(--cream-3);
+    border-top: 3px solid var(--orange);
+    box-shadow: var(--shadow-lg);
+}
+
+.calc-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 22px;
+    border-bottom: 1px solid var(--cream-2);
+    background: var(--cream-1);
+}
+
+.calc-title {
+    font-family: var(--font-m);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+.calc-live {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    color: var(--green);
+    display: flex; align-items: center; gap: 7px;
+}
+
+.calc-live::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    display: block;
+    animation: blink 2s ease-in-out infinite;
+}
+
+.calc-body { padding: 22px 22px 20px; }
+
+.calc-step { display: none; }
+.calc-step.active { display: block; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+
+.field-group { display: flex; flex-direction: column; gap: 6px; }
+
+.field-group label {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.field-group input, .field-group select {
+    background: #fff;
+    border: 1px solid var(--cream-3);
+    color: var(--text);
+    padding: 12px 14px;
+    font-family: var(--font-b);
+    font-size: 1rem; /* readable for older users */
+    width: 100%;
+    transition: border-color 0.2s;
+    appearance: none;
+}
+
+.field-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8e9a' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+.field-group input:focus, .field-group select:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px var(--orange-dim);
+}
+
+.field-group input::placeholder { color: var(--text-muted); font-size: 0.95rem; }
+
+.calc-result {
+    background: var(--cream-1);
+    border: 1px solid var(--border-orange);
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    display: none;
+}
+
+.calc-result.visible { display: block; }
+
+.result-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+
+.result-val {
+    font-family: var(--font-d);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+}
+
+.result-label {
+    font-family: var(--font-m);
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 5px;
+}
+
+.result-note {
+    font-family: var(--font-m);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-light);
+    padding-top: 10px;
+    line-height: 1.6;
+}
+
+.btn-calc {
+    font-family: var(--font-b);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 22px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+}
+
+.btn-calc:hover { background: var(--orange-light); }
+
+.btn-secondary-calc {
+    font-family: var(--font-m);
+    font-size: 0.7rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 11px;
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--cream-3);
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.btn-secondary-calc:hover { border-color: var(--text-muted); color: var(--text); }
+
+.email-prompt {
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+.email-row { display: flex; margin-bottom: 12px; }
+
+.email-row input {
+    flex: 1;
+    background: #fff;
+    border: 1px solid var(--cream-3);
+    border-right: none;
+    color: var(--text);
+    padding: 12px 16px;
+    font-family: var(--font-b);
+    font-size: 1rem;
+}
+
+.email-row input:focus { outline: none; border-color: var(--orange); }
+.email-row input::placeholder { color: var(--text-muted); }
+
+.email-row .btn-calc { width: auto; margin-bottom: 0; min-width: 100px; }
+
+.calc-success { text-align: center; padding: 18px 0; }
+
+.success-title {
+    font-family: var(--font-d);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.success-msg {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.success-calls { display: flex; gap: 10px; }
+
+.success-call-btn {
+    flex: 1;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background: var(--cream-1);
+    border: 1px solid var(--border-orange);
+    font-family: var(--font-m);
+    font-size: 0.65rem;
+    color: var(--orange);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background 0.2s;
+}
+
+.success-call-btn:hover { background: var(--orange-dim); }
+
+/* Honeypot hidden */
+.hp-field { display: none !important; }
+
+/* ============================================
+   SHARED SECTION UTILITIES
+   ============================================ */
+section { padding: 96px 40px; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+.section-label {
+    font-family: var(--font-m);
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 14px;
+}
+
+.section-label::before { content: ''; display: block; width: 24px; height: 1px; }
+
+.on-light .section-label, .on-cream .section-label { color: var(--orange); }
+.on-light .section-label::before, .on-cream .section-label::before { background: var(--orange); }
+.on-dark .section-label { color: var(--orange); }
+.on-dark .section-label::before { background: var(--orange); }
+
+.section-title {
+    font-family: var(--font-d);
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.92;
+    margin-bottom: 40px;
+}
+
+.on-light .section-title, .on-cream .section-title { color: var(--text); }
+.on-dark .section-title { color: var(--text-inv); }
+
+/* ============================================
+   SERVICES — light cream
+   ============================================ */
+.services { background: var(--cream-0); border-top: 1px solid var(--cream-2); }
+
+.services-intro {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 60px;
+}
+
+.services-desc {
+    font-size: 1.05rem;
+    color: var(--text-dim);
+    font-weight: 300;
+    line-height: 1.85;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Premium card with animated gradient border */
+.svc-card {
+    background: #fff;
+    padding: 44px 36px;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    border: 1px solid var(--cream-2);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Animated gradient border using pseudo-element */
+.svc-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: conic-gradient(
+        from var(--angle, 0deg),
+        transparent 0%,
+        transparent 40%,
+        var(--orange) 50%,
+        transparent 60%,
+        transparent 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+@property --angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+
+.svc-card:hover { transform: translateY(-6px); box-shadow: 0 20px 56px rgba(0,0,0,0.12); }
+.svc-card:hover::before { opacity: 1; animation: rotateBorder 3s linear infinite; }
+
+@keyframes rotateBorder { to { --angle: 360deg; } }
+
+/* Top accent bar */
+.svc-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.svc-card:hover::after { transform: scaleX(1); }
+
+/* Spotlight glow that follows mouse */
+.svc-spotlight {
+    position: absolute;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(224,77,10,0.06) 0%, transparent 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.svc-card:hover .svc-spotlight { opacity: 1; }
+
+.svc-num {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.svc-icon-wrap {
+    width: 52px; height: 52px;
+    background: var(--orange-dim);
+    border: 1px solid var(--border-orange);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 22px;
+    transition: background 0.3s;
+}
+
+.svc-card:hover .svc-icon-wrap { background: var(--orange); }
+.svc-card:hover .svc-icon-wrap svg { color: #fff; }
+
+.svc-icon-wrap svg { width: 24px; height: 24px; color: var(--orange); transition: color 0.3s; }
+
+.svc-title {
+    font-family: var(--font-d);
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 14px;
+    position: relative; z-index: 1;
+    line-height: 1;
+}
+
+.svc-desc {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.75;
+    font-weight: 300;
+    position: relative; z-index: 1;
+    margin-bottom: 24px;
+}
+
+.svc-list { list-style: none; position: relative; z-index: 1; }
+
+.svc-list li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 7px 0;
+    border-top: 1px solid var(--border-light);
+    display: flex; gap: 10px; align-items: flex-start;
+}
+
+.svc-list li::before {
+    content: '';
+    display: block;
+    width: 6px; height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;
+}
+
+/* ============================================
+   PROOF BAR — dark
+   ============================================ */
+.proof-bar {
+    background: var(--slate-0);
+    padding: 0;
+    border-top: 1px solid var(--slate-2);
+    border-bottom: 1px solid var(--slate-2);
+}
+
+.proof-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.proof-item {
+    padding: 36px 28px;
+    border-right: 1px solid var(--border-dark);
+    text-align: center;
+}
+
+.proof-item:last-child { border-right: none; }
+
+.proof-num {
+    font-family: var(--font-d);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.proof-label {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    color: var(--text-inv-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+}
+
+/* ============================================
+   HOW IT WORKS — light
+   ============================================ */
+.hiw { background: var(--cream-1); border-top: 1px solid var(--cream-2); }
+
+.hiw-intro { margin-bottom: 60px; }
+
+.hiw-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--cream-2); }
+
+.hiw-step {
+    background: var(--cream-1);
+    padding: 40px 32px;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.hiw-step:hover { background: #fff; }
+
+.hiw-step-num {
+    font-family: var(--font-d);
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--cream-2);
+    line-height: 1;
+    position: absolute;
+    top: 20px; right: 20px;
+    transition: color 0.3s;
+    user-select: none;
+}
+
+.hiw-step:hover .hiw-step-num { color: var(--orange-dim); }
+
+.hiw-step-icon {
+    width: 48px; height: 48px;
+    background: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hiw-step-icon svg { width: 22px; height: 22px; color: #fff; }
+
+.hiw-step-title {
+    font-family: var(--font-d);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+
+.hiw-step-desc {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+/* ============================================
+   COMPARISON TABLE — dark
+   ============================================ */
+.compare { background: var(--slate-0); border-top: 1px solid var(--slate-2); }
+
+.compare-intro { margin-bottom: 52px; }
+
+.compare-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+.compare-table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+}
+
+.compare-table th {
+    font-family: var(--font-d);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 24px;
+    text-align: left;
+    border-bottom: 2px solid var(--border-dark);
+}
+
+.compare-table th:first-child { color: var(--text-inv-muted); font-size: 0.75rem; font-family: var(--font-m); }
+
+.compare-table th.ours {
+    color: var(--orange);
+    border-bottom-color: var(--orange);
+    background: rgba(224,77,10,0.05);
+}
+
+.compare-table td {
+    padding: 16px 24px;
+    font-size: 0.95rem;
+    color: var(--text-inv-dim);
+    border-bottom: 1px solid var(--border-dark);
+    vertical-align: middle;
+}
+
+.compare-table td:first-child {
+    font-family: var(--font-m);
+    font-size: 0.7rem;
+    color: var(--text-inv-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.compare-table td.ours {
+    background: rgba(224,77,10,0.04);
+    color: var(--text-inv);
+    font-weight: 500;
+}
+
+.compare-table tr:last-child td { border-bottom: none; }
+
+.check { color: var(--green-light); font-size: 1.1rem; }
+.cross { color: var(--text-inv-muted); font-size: 1.1rem; }
+.neutral { color: var(--text-inv-muted); font-size: 0.85rem; }
+
+/* ============================================
+   FLEET — light cream with horizontal scroll on mobile
+   ============================================ */
+.fleet { background: var(--cream-0); border-top: 1px solid var(--cream-2); }
+
+.fleet-header {
+    display: flex; justify-content: space-between;
+    align-items: flex-end; margin-bottom: 52px;
+}
+
+.fleet-meta {
+    font-family: var(--font-m);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-align: right;
+    line-height: 1.9;
+}
+
+.fleet-scroll-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px; /* show scrollbar hint on mobile */
+    scrollbar-width: thin;
+    scrollbar-color: var(--orange) var(--cream-2);
+}
+
+.fleet-scroll-wrap::-webkit-scrollbar { height: 4px; }
+.fleet-scroll-wrap::-webkit-scrollbar-track { background: var(--cream-2); }
+.fleet-scroll-wrap::-webkit-scrollbar-thumb { background: var(--orange); }
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
+    gap: 16px;
+    min-width: 1100px; /* forces horizontal scroll when needed */
+}
+
+.fleet-card {
+    background: #fff;
+    border: 1px solid var(--cream-2);
+    border-top: 3px solid transparent;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    scroll-snap-align: start;
+}
+
+.fleet-card:hover {
+    border-top-color: var(--orange);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+}
+
+.fleet-img {
+    width: 100%;
+    height: 200px;
+    background: var(--slate-0);
+    position: relative;
+    overflow: hidden;
+}
+
+.fleet-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    filter: brightness(0.9) saturate(0.85);
+}
+
+.fleet-card:hover .fleet-img img { transform: scale(1.06); filter: brightness(1) saturate(1); }
+
+.fleet-fallback {
+    width: 100%; height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-inv-muted);
+    font-family: var(--font-m);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    gap: 10px;
+}
+
+.fleet-fallback svg { width: 40px; height: 40px; opacity: 0.4; }
+
+.fleet-tag-wrap { position: absolute; top: 12px; left: 12px; display: flex; gap: 6px; }
+
+.ftag {
+    font-family: var(--font-m);
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(42,46,56,0.85);
+    color: #fff;
+    padding: 4px 9px;
+    backdrop-filter: blur(4px);
+}
+
+.ftag.orange { background: var(--orange); color: #fff; }
+
+.fleet-body { padding: 24px 22px; }
+
+.fleet-name {
+    font-family: var(--font-d);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.fleet-qty {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+}
+
+.fleet-role {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    font-weight: 300;
+    line-height: 1.55;
+    margin-bottom: 16px;
+}
+
+.fleet-specs {
+    list-style: none;
+    border-top: 1px solid var(--border-light);
+    padding-top: 14px;
+}
+
+.fleet-specs li {
+    font-family: var(--font-m);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.fleet-specs li:last-child { border-bottom: none; }
+.fleet-specs strong { color: var(--text-dim); font-weight: 500; }
+
+.fleet-scroll-hint {
+    text-align: center;
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 16px;
+    display: none;
+}
+
+/* ============================================
+   COVERAGE — dark
+   ============================================ */
+.coverage { background: var(--slate-0); border-top: 1px solid var(--slate-2); }
+
+.coverage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+
+.coverage-map-visual {
+    background: var(--slate-1);
+    border: 1px solid var(--slate-2);
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.coverage-map-visual::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(224,77,10,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(224,77,10,0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.coverage-pulse {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(224,77,10,0.45) 0%, rgba(224,77,10,0.08) 40%, transparent 70%);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.coverage-pulse::before, .coverage-pulse::after {
+    content: ''; position: absolute;
+    border: 1px solid var(--orange);
+    border-radius: 50%;
+    animation: ping 3.2s ease-out infinite;
+}
+
+.coverage-pulse::before { width: 100%; height: 100%; }
+.coverage-pulse::after { width: 170%; height: 170%; animation-delay: 1.1s; border-color: rgba(224,77,10,0.2); }
+
+@keyframes ping { 0% { transform: scale(0.7); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+
+.coverage-dot { width: 16px; height: 16px; background: var(--orange); border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 16px rgba(224,77,10,0.7); }
+
+.cov-map-lbl { position: absolute; bottom: 16px; left: 16px; font-family: var(--font-m); font-size: 0.6rem; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; }
+.cov-map-lbl2 { position: absolute; top: 16px; right: 16px; font-family: var(--font-m); font-size: 0.6rem; color: var(--text-inv-muted); }
+
+.coverage-features { display: flex; flex-direction: column; gap: 2px; background: var(--slate-2); }
+
+.cov-feat { background: var(--slate-1); padding: 26px 30px; display: flex; gap: 20px; align-items: flex-start; transition: background 0.2s; }
+.cov-feat:hover { background: var(--slate-2); }
+
+.cov-icon { width: 40px; height: 40px; background: var(--slate-2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.cov-icon svg { width: 20px; height: 20px; color: var(--orange); }
+
+.cov-feat-text h4 { font-family: var(--font-d); font-size: 1.1rem; font-weight: 700; text-transform: uppercase; color: var(--text-inv); margin-bottom: 5px; line-height: 1.1; }
+.cov-feat-text p { font-size: 0.9rem; color: var(--text-inv-dim); font-weight: 300; line-height: 1.65; }
+
+.verification-wrap { display: flex; margin-top: 28px; }
+.verification-wrap a { display: inline-block; transition: opacity 0.2s; }
+.verification-wrap a:hover { opacity: 0.75; }
+.verification-wrap img { height: 42px; }
+
+/* ============================================
+   FAQ — light cream
+   ============================================ */
+.faq { background: var(--cream-1); border-top: 1px solid var(--cream-2); }
+
+.faq-layout { display: grid; grid-template-columns: 340px 1fr; gap: 80px; align-items: start; }
+
+.faq-intro-text {
+    font-size: 1rem;
+    color: var(--text-dim);
+    font-weight: 300;
+    line-height: 1.8;
+    margin-top: 16px;
+}
+
+.faq-contact-nudge {
+    margin-top: 32px;
+    padding: 20px;
+    background: var(--orange-dim);
+    border: 1px solid var(--border-orange);
+    border-left: 3px solid var(--orange);
+}
+
+.faq-contact-nudge p {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.faq-contact-nudge a {
+    font-family: var(--font-m);
+    font-size: 0.72rem;
+    color: var(--orange);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.faq-list { display: flex; flex-direction: column; }
+
+.faq-item {
+    border-bottom: 1px solid var(--cream-2);
+    overflow: hidden;
+}
+
+.faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px 0;
+    text-align: left;
+    font-family: var(--font-b);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: color 0.2s;
+}
+
+.faq-q:hover { color: var(--orange); }
+
+.faq-q-icon {
+    width: 28px; height: 28px;
+    border: 1px solid var(--cream-3);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s;
+}
+
+.faq-q-icon svg { width: 14px; height: 14px; color: var(--text-muted); transition: transform 0.3s; }
+
+.faq-item.open .faq-q { color: var(--orange); }
+.faq-item.open .faq-q-icon { background: var(--orange); border-color: var(--orange); }
+.faq-item.open .faq-q-icon svg { transform: rotate(45deg); color: #fff; }
+
+.faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-a-inner {
+    padding: 0 0 22px 0;
+    font-size: 1rem;
+    color: var(--text-dim);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* ============================================
+   TESTIMONIALS — dark
+   ============================================ */
+.testimonials { background: var(--slate-0); border-top: 1px solid var(--slate-2); }
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--slate-2);
+}
+
+.testi-card {
+    background: var(--slate-1);
+    padding: 36px 32px;
+    border-top: 3px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.testi-card:hover { border-top-color: var(--orange); background: var(--slate-2); }
+
+.testi-rating { display: flex; gap: 3px; margin-bottom: 20px; }
+.testi-rating svg { width: 16px; height: 16px; fill: #f5a623; }
+
+.testi-quote {
+    font-size: 1rem;
+    color: var(--text-inv-dim);
+    font-weight: 300;
+    line-height: 1.85;
+    font-style: italic;
+    margin-bottom: 24px;
+    border-left: 2px solid var(--orange);
+    padding-left: 18px;
+}
+
+.testi-author strong {
+    display: block;
+    font-family: var(--font-d);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-inv);
+    margin-bottom: 2px;
+}
+
+.testi-author span {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    color: var(--text-inv-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* ============================================
+   CONTACT — light
+   ============================================ */
+.contact { background: var(--cream-0); border-top: 1px solid var(--cream-2); }
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; }
+
+.contact-block {
+    background: #fff;
+    border: 1px solid var(--cream-2);
+    border-top: 3px solid var(--orange);
+    padding: 40px;
+}
+
+.contact-block h3 {
+    font-family: var(--font-d);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    color: var(--orange);
+}
+
+.contact-row {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.contact-row:last-child { border-bottom: none; }
+
+.contact-key {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    min-width: 76px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.contact-val { font-size: 1rem; color: var(--text-dim); line-height: 1.6; }
+
+.contact-val a { color: var(--orange); text-decoration: none; font-weight: 500; }
+.contact-val a:hover { text-decoration: underline; }
+
+.pilot-card {
+    background: var(--cream-0);
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--green);
+}
+
+.pilot-card:last-child { margin-bottom: 0; }
+
+.pilot-name {
+    font-family: var(--font-d);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.pilot-cca {
+    font-family: var(--font-m);
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+}
+
+.pilot-phone a { color: var(--green) !important; font-weight: 600; font-size: 1.05rem; }
+
+/* Contact form */
+.contact-form-wrap { display: flex; flex-direction: column; gap: 14px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.form-group { display: flex; flex-direction: column; gap: 7px; }
+
+.form-group label {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    background: #fff;
+    border: 1px solid var(--cream-3);
+    color: var(--text);
+    padding: 13px 16px;
+    font-family: var(--font-b);
+    font-size: 1rem; /* large for older farmers */
+    width: 100%;
+    transition: border-color 0.2s;
+    appearance: none;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px var(--orange-dim);
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8e9a' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 38px;
+    cursor: pointer;
+}
+
+.form-group textarea { resize: vertical; min-height: 110px; }
+
+.btn-submit {
+    font-family: var(--font-b);
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 16px 32px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+    letter-spacing: 0.01em;
+}
+
+.btn-submit:hover { background: var(--orange-light); }
+
+.form-success {
+    background: var(--green-dim);
+    border: 1px solid var(--border-green);
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: var(--green);
+    display: none;
+}
+
+.form-success.visible { display: block; }
+
+/* ============================================
+   FOOTER — dark
+   ============================================ */
+.footer { background: var(--slate-0); border-top: 1px solid var(--slate-2); }
+
+.footer-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 40px 40px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-brand img { height: 36px; margin-bottom: 16px; }
+
+.footer-brand-name {
+    font-family: var(--font-d);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-inv-dim);
+    margin-bottom: 6px;
+}
+
+.footer-brand-sub {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    color: var(--text-inv-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+}
+
+.footer-brand-desc {
+    font-size: 0.9rem;
+    color: var(--text-inv-muted);
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 280px;
+}
+
+.footer-col-title {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-inv-muted);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.footer-links-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+.footer-links-list a {
+    font-size: 0.95rem;
+    color: var(--text-inv-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links-list a:hover { color: var(--orange); }
+
+.footer-contact-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.footer-contact-item svg { width: 16px; height: 16px; color: var(--orange); flex-shrink: 0; margin-top: 2px; }
+
+.footer-contact-item span { font-size: 0.9rem; color: var(--text-inv-dim); line-height: 1.5; }
+
+.footer-contact-item a { color: var(--text-inv-dim); text-decoration: none; transition: color 0.2s; }
+.footer-contact-item a:hover { color: var(--orange); }
+
+.footer-bottom {
+    border-top: 1px solid var(--border-dark);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.footer-bottom-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-copy {
+    font-family: var(--font-m);
+    font-size: 0.62rem;
+    color: var(--text-inv-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.footer-badge a { display: inline-block; transition: opacity 0.2s; }
+.footer-badge a:hover { opacity: 0.75; }
+.footer-badge img { height: 36px; }
+
+/* ============================================
+   STICKY MOBILE CTA
+   ============================================ */
+.mobile-cta-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 800;
+    background: var(--slate-0);
+    border-top: 2px solid var(--orange);
+    padding: 14px 20px;
+    gap: 10px;
+}
+
+.mobile-cta-bar a {
+    display: block;
+    flex: 1;
+    text-align: center;
+    padding: 14px;
+    font-family: var(--font-b);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.mobile-cta-call {
+    background: var(--green);
+    color: #fff;
+}
+
+.mobile-cta-quote {
+    background: var(--orange);
+    color: #fff;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.fade-up {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1100px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 52px; }
+    .hero { padding: 80px 40px 60px; min-height: auto; }
+    .proof-bar-inner { grid-template-columns: repeat(3, 1fr); }
+    .proof-item:nth-child(4), .proof-item:nth-child(5) { border-top: 1px solid var(--border-dark); }
+    .hiw-grid { grid-template-columns: repeat(2, 1fr); }
+    .faq-layout { grid-template-columns: 1fr; gap: 48px; }
+    .footer-main { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+    body { font-size: 17px; }
+    section { padding: 70px 24px; }
+    .topbar { padding: 8px 24px; }
+    .navbar { padding: 0 24px; }
+    .nav-links, .nav-cta, .nav-phone { display: none; }
+    .mobile-toggle { display: flex; }
+    .hero { padding: 70px 24px 52px; }
+    .services-intro { grid-template-columns: 1fr; gap: 24px; }
+    .services-grid { grid-template-columns: 1fr; gap: 16px; }
+    .fleet-scroll-hint { display: block; }
+    .compare-table-wrap { margin: 0 -24px; padding: 0 24px; }
+    .coverage-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; gap: 2px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-main { grid-template-columns: 1fr; gap: 36px; padding: 40px 24px; }
+    .footer-bottom { padding: 20px 24px; }
+    .mobile-cta-bar { display: flex; }
+    /* push content above sticky bar */
+    .contact { padding-bottom: 120px; }
+}
+
+@media (max-width: 640px) {
+    .topbar { padding: 7px 16px; }
+    .topbar-left { display: none; }
+    .hero h1 { font-size: 3.2rem; }
+    .hero-stats { flex-wrap: wrap; gap: 24px; }
+    .field-row { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .proof-bar-inner { grid-template-columns: 1fr 1fr; }
+    .proof-item:nth-child(5) { grid-column: 1 / -1; border-top: 1px solid var(--border-dark); }
+    .hiw-grid { grid-template-columns: 1fr; }
+    .hero-corner { display: none; }
+    .compare-table-wrap { margin: 0 -16px; padding: 0 16px; }
+}
+
+/* Mobile nav open state */
+.navbar.nav-open .nav-links {
+    display: flex;
+    position: fixed;
+    top: 68px; left: 0; right: 0; bottom: 0;
+    flex-direction: column;
+    background: var(--cream-0);
+    padding: 36px 24px;
+    gap: 6px;
+    border-top: 1px solid var(--cream-2);
+    z-index: 899;
+    overflow-y: auto;
+}
+
+.navbar.nav-open .nav-links a { font-size: 1rem; color: var(--text-dim); padding: 10px 0; }
+
+.navbar.nav-open .nav-cta {
+    display: block;
+    position: fixed;
+    bottom: 84px; left: 24px; right: 24px;
+    text-align: center;
+    padding: 16px;
+    z-index: 901;
+    font-size: 1rem;
+}
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="logo.png" alt="Loke Drone LC" class="logo" id="logoTrigger">
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <span class="topbar-left">Wisconsin &amp; Minnesota Agricultural Drone Services</span>
+    <div class="topbar-right">
+        <span class="topbar-status">Accepting New Jobs</span>
+        <a href="tel:+17157972428" class="topbar-phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6.06 6.06l1.06-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (715) 797-2428
+        </a>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">
+        <a href="/"><img src="logo.png" alt="Loke Drone LC — Agricultural Drone Services" width="160" height="40"></a>
+    </div>
+    <ul class="nav-links" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#coverage">Coverage</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:+17157972428" class="nav-phone" aria-label="Call us at (715) 797-2428">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6.06 6.06l1.06-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (715) 797-2428
+    </a>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="home" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-corner tl" aria-hidden="true"></div>
+    <div class="hero-corner tr" aria-hidden="true"></div>
+    <div class="hero-corner bl" aria-hidden="true"></div>
+    <div class="hero-corner br" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+        <div class="hero-left">
+            <div class="hero-tag" aria-hidden="true">Wisconsin &amp; Minnesota · Chetek, WI</div>
+            <h1>Precision<br>Ag Drone<em>Services.</em></h1>
+            <p class="hero-desc">
+                Two Certified Crop Advisors. Four aircraft. Same-week scheduling. When wet fields and tight timing windows matter most, we get there — without a wheel in your field.
+            </p>
+            <div class="hero-stats" role="list" aria-label="Key statistics">
+                <div class="hstat" role="listitem">
+                    <div class="hstat-num" data-count="25000" data-suffix="+">0</div>
+                    <div class="hstat-label">Acres Treated</div>
+                </div>
+                <div class="hstat" role="listitem">
+                    <div class="hstat-num" data-count="55" data-suffix="+">0</div>
+                    <div class="hstat-label">Acres/Hour (T100)</div>
+                </div>
+                <div class="hstat" role="listitem">
+                    <div class="hstat-num" data-count="0" data-suffix="lbs">0</div>
+                    <div class="hstat-label">Soil Compaction</div>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#fleet">Our Fleet</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="hero-trust" role="list" aria-label="Certifications and credentials">
+                <span class="trust-chip green-chip" role="listitem">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Accepting New Jobs
+                </span>
+                <span class="trust-chip" role="listitem">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    FAA Licensed
+                </span>
+                <span class="trust-chip" role="listitem">CCA Certified</span>
+                <span class="trust-chip" role="listitem">AAOC #23021A</span>
+            </div>
+        </div>
+
+        <!-- QUOTE CALCULATOR -->
+        <div class="calc-widget" role="complementary" aria-label="Field Quote Calculator">
+            <div class="calc-header">
+                <span class="calc-title">Field Quote Calculator</span>
+                <span class="calc-live" aria-live="polite">Instant Estimate</span>
+            </div>
+            <div class="calc-body">
+
+                <div class="calc-step active" id="step1">
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="acres">Acres to treat</label>
+                            <input type="number" id="acres" placeholder="e.g. 250" min="1" max="10000" aria-describedby="acres-hint">
+                        </div>
+                        <div class="field-group">
+                            <label for="cropType">Crop type</label>
+                            <select id="cropType" aria-label="Select crop type">
+                                <option value="">Select crop</option>
+                                <option value="corn">Corn</option>
+                                <option value="soy">Soybeans</option>
+                                <option value="wheat">Wheat</option>
+                                <option value="alfalfa">Alfalfa / Forage</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="appType">Application type</label>
+                            <select id="appType" aria-label="Select application type">
+                                <option value="">Select type</option>
+                                <option value="fungicide">Fungicide</option>
+                                <option value="herbicide">Herbicide</option>
+                                <option value="insecticide">Insecticide</option>
+                                <option value="seeding">Cover Crop Seeding</option>
+                                <option value="frost">Frost Seeding</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <label for="county">County / State</label>
+                            <input type="text" id="county" placeholder="e.g. Barron, WI" aria-label="County and state">
+                        </div>
+                    </div>
+                    <div class="calc-result" id="calcResult" aria-live="polite" aria-label="Price estimate">
+                        <div class="result-row">
+                            <div>
+                                <div class="result-val" id="hoursResult" aria-label="Estimated hours">—</div>
+                                <div class="result-label">Est. Hours</div>
+                            </div>
+                            <div>
+                                <div class="result-val" id="costResult" aria-label="Price range">—</div>
+                                <div class="result-label">Price Range</div>
+                            </div>
+                        </div>
+                        <div class="result-note" id="resultNote"></div>
+                    </div>
+                    <button class="btn-calc" onclick="calculateQuote()" id="calcBtn">Get Estimate</button>
+                    <button class="btn-secondary-calc" id="toEmailBtn" onclick="goToEmail()" style="display:none;">Send Me the Full Quote by Email</button>
+                </div>
+
+                <div class="calc-step" id="step2">
+                    <p class="email-prompt">Your estimate for <strong id="summaryAcres">—</strong> acres is ready. Enter your email and we'll send the full breakdown with scheduling availability.</p>
+                    <div class="email-row">
+                        <input type="email" id="emailInput" placeholder="your@email.com" aria-label="Email address">
+                        <button class="btn-calc" onclick="submitEmail()">Send</button>
+                    </div>
+                    <input type="text" id="nameInput" placeholder="Your name (optional)" aria-label="Your name" style="background:#fff;border:1px solid var(--cream-3);color:var(--text);padding:12px 14px;font-family:var(--font-b);font-size:1rem;width:100%;margin-bottom:12px;display:block;">
+                    <button class="btn-secondary-calc" onclick="goBack()">Back to Calculator</button>
+                </div>
+
+                <div class="calc-step" id="step3">
+                    <div class="calc-success">
+                        <div style="font-family:var(--font-d);font-size:2rem;color:var(--green);font-weight:700;margin-bottom:8px;">Quote Sent</div>
+                        <p class="success-msg">We'll follow up within 24 hours with your full quote and available scheduling dates. Sig or Kevin will reach out directly.</p>
+                        <div class="success-calls">
+                            <a href="tel:+17157972428" class="success-call-btn" aria-label="Call Sigurd Lindquist at (715) 797-2428">Call Sig — (715) 797-2428</a>
+                            <a href="tel:+17156411239" class="success-call-btn" aria-label="Call Kevin Austin at (715) 641-1239">Call Kevin — (715) 641-1239</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SERVICES
+     ============================================ -->
+<section class="services on-light" id="services" aria-labelledby="services-heading">
+    <div class="container">
+        <div class="services-intro">
+            <div>
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title" id="services-heading">Ag Drone<br>Services</h2>
+            </div>
+            <p class="services-desc">
+                From fungicide runs on 500-acre corn fields to frost seeding pastures in early March — we operate year-round across Wisconsin and Minnesota. Both of our lead pilots hold Certified Crop Advisor credentials, which means every application comes with professional agronomy behind it, not just someone flying a drone.
+            </p>
+        </div>
+
+        <div class="services-grid" role="list">
+
+            <article class="svc-card fade-up" role="listitem" aria-label="Crop Spraying Service">
+                <div class="svc-spotlight" aria-hidden="true"></div>
+                <div class="svc-num" aria-hidden="true">01</div>
+                <div class="svc-icon-wrap" aria-hidden="true">
+                    <!-- crop spraying icon -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17.5L6 19l2-1.5M8 17.5L10 19l2-1.5M12 17.5L14 19l2-1.5"/><path d="M3 12h18M3 8l2-4h14l2 4M8 12v5M12 12v5M16 12v5"/></svg>
+                </div>
+                <h3 class="svc-title">Crop Spraying</h3>
+                <p class="svc-desc">Precise aerial application of fungicides, herbicides, and pesticides. Consistent coverage across any field, any terrain — without a tire track left behind.</p>
+                <ul class="svc-list" aria-label="Crop spraying benefits">
+                    <li>Fungicide, herbicide &amp; insecticide application</li>
+                    <li>Get into wet or compacted fields</li>
+                    <li>Zero soil compaction — no yield drag</li>
+                    <li>30–55+ acres treated per hour</li>
+                    <li>CCA-advised rates and timing</li>
+                </ul>
+            </article>
+
+            <article class="svc-card fade-up" role="listitem" style="transition-delay:0.1s" aria-label="Cover Crop Seeding Service">
+                <div class="svc-spotlight" aria-hidden="true"></div>
+                <div class="svc-num" aria-hidden="true">02</div>
+                <div class="svc-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12"/><path d="M12 6v6l4 2"/><path d="M2 12c0-5.52 4.48-10 10-10"/></svg>
+                </div>
+                <h3 class="svc-title">Cover Crop Seeding</h3>
+                <p class="svc-desc">Aerial seeding directly into standing corn or soybeans. Establish winter cover without waiting for harvest — protecting your soil and extending your growing window.</p>
+                <ul class="svc-list" aria-label="Cover crop seeding benefits">
+                    <li>Seed into standing crops — no harvest wait</li>
+                    <li>Minimal soil disturbance</li>
+                    <li>Uniform seed distribution across the field</li>
+                    <li>Full-field coverage completed in hours</li>
+                    <li>Reduced erosion and input costs</li>
+                </ul>
+            </article>
+
+            <article class="svc-card fade-up" role="listitem" style="transition-delay:0.2s" aria-label="Frost Seeding Service">
+                <div class="svc-spotlight" aria-hidden="true"></div>
+                <div class="svc-num" aria-hidden="true">03</div>
+                <div class="svc-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.93 4.93l14.14 14.14M2 12h20M4.93 19.07L19.07 4.93"/></svg>
+                </div>
+                <h3 class="svc-title">Frost Seeding</h3>
+                <p class="svc-desc">Take advantage of Wisconsin's freeze-thaw cycles in early spring. Establish pastures and forage crops without any ground equipment entering your fields.</p>
+                <ul class="svc-list" aria-label="Frost seeding benefits">
+                    <li>Early March application window</li>
+                    <li>No field entry or ground equipment</li>
+                    <li>Soil freeze-thaw works seed in naturally</li>
+                    <li>Cost-effective stand establishment</li>
+                    <li>Alfalfa, clover, and mixed species</li>
+                </ul>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     PROOF BAR
+     ============================================ -->
+<div class="proof-bar" role="complementary" aria-label="Key statistics">
+    <div class="proof-bar-inner">
+        <div class="proof-item">
+            <div class="proof-num" data-count="25000" data-suffix="+">0</div>
+            <div class="proof-label">Total Acres<br>Treated</div>
+        </div>
+        <div class="proof-item">
+            <div class="proof-num" data-count="7" data-suffix="">0</div>
+            <div class="proof-label">Aircraft in<br>Fleet Network</div>
+        </div>
+        <div class="proof-item">
+            <div class="proof-num" data-count="2" data-suffix="">0</div>
+            <div class="proof-label">Certified Crop<br>Advisors</div>
+        </div>
+        <div class="proof-item">
+            <div class="proof-num" data-count="55" data-suffix="+">0</div>
+            <div class="proof-label">Acres per Hour<br>(DJI T100)</div>
+        </div>
+        <div class="proof-item">
+            <div class="proof-num" data-count="0" data-suffix="lbs">0</div>
+            <div class="proof-label">Soil<br>Compaction</div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================
+     HOW IT WORKS
+     ============================================ -->
+<section class="hiw on-cream" id="how" aria-labelledby="hiw-heading">
+    <div class="container">
+        <div class="hiw-intro">
+            <div class="section-label">Simple Process</div>
+            <h2 class="section-title" id="hiw-heading">From Phone<br>Call to Field</h2>
+        </div>
+        <div class="hiw-grid">
+            <div class="hiw-step fade-up">
+                <span class="hiw-step-num" aria-hidden="true">1</span>
+                <div class="hiw-step-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6.06 6.06l.98-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <h3 class="hiw-step-title">Call or Request Online</h3>
+                <p class="hiw-step-desc">Call Sig or Kevin directly, or use our online quote form. We'll ask about your field size, location, crop, and target timing window.</p>
+            </div>
+            <div class="hiw-step fade-up" style="transition-delay:0.1s">
+                <span class="hiw-step-num" aria-hidden="true">2</span>
+                <div class="hiw-step-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <h3 class="hiw-step-title">Receive Your Quote</h3>
+                <p class="hiw-step-desc">We'll send you a clear, itemized quote — no surprises. Pricing is straightforward: per-acre rates with a stated minimum, spelled out before we ever fly.</p>
+            </div>
+            <div class="hiw-step fade-up" style="transition-delay:0.2s">
+                <span class="hiw-step-num" aria-hidden="true">3</span>
+                <div class="hiw-step-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <h3 class="hiw-step-title">We Schedule Around Weather</h3>
+                <p class="hiw-step-desc">We monitor conditions and communicate proactively. Same-week scheduling is often available. We aim to hit your ideal application window — not just a convenient day for us.</p>
+            </div>
+            <div class="hiw-step fade-up" style="transition-delay:0.3s">
+                <span class="hiw-step-num" aria-hidden="true">4</span>
+                <div class="hiw-step-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3 class="hiw-step-title">Your Field Gets Treated</h3>
+                <p class="hiw-step-desc">We arrive, fly, and complete the application — then provide a treatment report showing coverage, product applied, and application data. No field entry required from you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     COMPARISON TABLE
+     ============================================ -->
+<section class="compare on-dark" id="compare" aria-labelledby="compare-heading">
+    <div class="container">
+        <div class="compare-intro">
+            <div class="section-label">Why Drone</div>
+            <h2 class="section-title" id="compare-heading">How We Stack Up</h2>
+            <p style="font-size:1rem;color:var(--text-inv-dim);font-weight:300;max-width:600px;margin-top:8px;line-height:1.75;">Every application method has its place. Here's how drone application compares to the alternatives for common on-farm scenarios.</p>
+        </div>
+        <div class="compare-table-wrap" role="region" aria-label="Comparison table — drone vs ground sprayer vs aerial applicator">
+            <table class="compare-table" aria-label="Application method comparison">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width:220px;">Factor</th>
+                        <th scope="col" class="ours">Loke Drone LC</th>
+                        <th scope="col">Ground Sprayer</th>
+                        <th scope="col">Manned Aircraft</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Soil compaction</td>
+                        <td class="ours"><span class="check">None</span> — aircraft never enters the field</td>
+                        <td><span class="cross">Heavy</span> — especially in wet conditions</td>
+                        <td><span class="check">None</span></td>
+                    </tr>
+                    <tr>
+                        <td>Wet field access</td>
+                        <td class="ours"><span class="check">Yes</span> — flies regardless of field conditions</td>
+                        <td><span class="cross">No</span> — risk of getting stuck and compaction</td>
+                        <td><span class="check">Yes</span></td>
+                    </tr>
+                    <tr>
+                        <td>In-crop seeding</td>
+                        <td class="ours"><span class="check">Yes</span> — seed into standing corn or soybeans</td>
+                        <td><span class="cross">No</span> — cannot enter standing crop</td>
+                        <td><span class="neutral">Limited</span></td>
+                    </tr>
+                    <tr>
+                        <td>Precision / accuracy</td>
+                        <td class="ours"><span class="check">High</span> — RTK GPS, inch-level accuracy</td>
+                        <td><span class="neutral">Moderate</span> — operator dependent</td>
+                        <td><span class="neutral">Moderate</span></td>
+                    </tr>
+                    <tr>
+                        <td>Crop advisory included</td>
+                        <td class="ours"><span class="check">Yes</span> — both pilots are CCAs</td>
+                        <td><span class="cross">Usually not</span></td>
+                        <td><span class="cross">Usually not</span></td>
+                    </tr>
+                    <tr>
+                        <td>Scheduling / availability</td>
+                        <td class="ours">Same-week · flexible · responsive</td>
+                        <td><span class="neutral">Depends on your equipment</span></td>
+                        <td><span class="cross">High demand · hard to book quickly</span></td>
+                    </tr>
+                    <tr>
+                        <td>Minimum acreage</td>
+                        <td class="ours">$400 minimum job (no minimum acres)</td>
+                        <td>Cost of equipment ownership</td>
+                        <td>Usually 100+ acres minimum</td>
+                    </tr>
+                    <tr>
+                        <td>Frost seeding</td>
+                        <td class="ours"><span class="check">Yes</span> — specialty service</td>
+                        <td><span class="neutral">Possible but equipment-intensive</span></td>
+                        <td><span class="cross">Not typical</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     FLEET
+     ============================================ -->
+<section class="fleet on-light" id="fleet" aria-labelledby="fleet-heading">
+    <div class="container">
+        <div class="fleet-header">
+            <div>
+                <div class="section-label">Our Aircraft</div>
+                <h2 class="section-title" id="fleet-heading">The Fleet</h2>
+            </div>
+            <div class="fleet-meta" aria-label="Fleet summary">
+                4 Company Aircraft &nbsp;|&nbsp; 3 Subcontractor Units<br>
+                Active Year-Round &nbsp;|&nbsp; WI &amp; MN
+            </div>
+        </div>
+        <div class="fleet-scroll-wrap" role="region" aria-label="Aircraft fleet — scroll to see all">
+            <div class="fleet-grid">
+
+                <article class="fleet-card fade-up" aria-label="DJI T50 sprayer drone">
+                    <div class="fleet-img">
+                        <img src="images/t50.jpg" alt="DJI Agras T50 agricultural sprayer drone in flight over a field" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="fleet-fallback">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            DJI Agras T50
+                        </div>
+                        <div class="fleet-tag-wrap"><span class="ftag">Sprayer</span></div>
+                    </div>
+                    <div class="fleet-body">
+                        <div class="fleet-name">DJI T50</div>
+                        <div class="fleet-qty">2 Units in Fleet</div>
+                        <p class="fleet-role">High-capacity precision sprayer with advanced nozzle control and terrain-following.</p>
+                        <ul class="fleet-specs" aria-label="DJI T50 specifications">
+                            <li><strong>Tank Capacity</strong><span>13.2 gal</span></li>
+                            <li><strong>Spray Width</strong><span>Up to 36 ft</span></li>
+                            <li><strong>Speed</strong><span>21 mph</span></li>
+                            <li><strong>Coverage</strong><span>30+ ac/hr</span></li>
+                            <li><strong>Flight Time</strong><span>14–18 min</span></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="fleet-card fade-up" style="transition-delay:0.1s" aria-label="DJI T100 sprayer drone">
+                    <div class="fleet-img">
+                        <img src="images/t100.jpg" alt="DJI Agras T100 large-capacity agricultural drone" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="fleet-fallback">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            DJI Agras T100
+                        </div>
+                        <div class="fleet-tag-wrap"><span class="ftag">Sprayer</span><span class="ftag orange">New</span></div>
+                    </div>
+                    <div class="fleet-body">
+                        <div class="fleet-name">DJI T100</div>
+                        <div class="fleet-qty">1 Unit — Flagship</div>
+                        <p class="fleet-role">DJI's largest ag drone. Double the tank, 42-ft spray width, built for high-acreage operations.</p>
+                        <ul class="fleet-specs" aria-label="DJI T100 specifications">
+                            <li><strong>Tank Capacity</strong><span>26.4 gal</span></li>
+                            <li><strong>Spray Width</strong><span>Up to 42 ft</span></li>
+                            <li><strong>Speed</strong><span>45 mph</span></li>
+                            <li><strong>Coverage</strong><span>55–70+ ac/hr</span></li>
+                            <li><strong>Flow Rate</strong><span>10.5 gal/min</span></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="fleet-card fade-up" style="transition-delay:0.2s" aria-label="DJI Matrice 4T thermal drone">
+                    <div class="fleet-img">
+                        <img src="images/matrice4t.jpg" alt="DJI Matrice 4T with thermal camera for agricultural mapping and deer recovery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="fleet-fallback">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12h3M19 12h3M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+                            Matrice 4T
+                        </div>
+                        <div class="fleet-tag-wrap"><span class="ftag">Thermal</span><span class="ftag">Mapping</span></div>
+                    </div>
+                    <div class="fleet-body">
+                        <div class="fleet-name">Matrice 4T</div>
+                        <div class="fleet-qty">1 Unit</div>
+                        <p class="fleet-role">NDVI crop scouting, field mapping, and thermal deer recovery. Sees what the naked eye cannot.</p>
+                        <ul class="fleet-specs" aria-label="Matrice 4T specifications">
+                            <li><strong>RGB Camera</strong><span>48 MP</span></li>
+                            <li><strong>Thermal Camera</strong><span>Included</span></li>
+                            <li><strong>Speed</strong><span>45 mph</span></li>
+                            <li><strong>Flight Time</strong><span>55 min</span></li>
+                            <li><strong>Range</strong><span>12.4 mi</span></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="fleet-card fade-up" style="transition-delay:0.3s" aria-label="EAVision J100 subcontractor drone">
+                    <div class="fleet-img">
+                        <img src="images/j100.jpg" alt="EAVision J100 agricultural drone operated by subcontractors" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="fleet-fallback">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            EAVision J100
+                        </div>
+                        <div class="fleet-tag-wrap"><span class="ftag">Network</span></div>
+                    </div>
+                    <div class="fleet-body">
+                        <div class="fleet-name">EAVision J100</div>
+                        <div class="fleet-qty">3 Subcontractor Units</div>
+                        <p class="fleet-role">Extended coverage network for peak-season demand and large-acreage surge capacity.</p>
+                        <ul class="fleet-specs" aria-label="EAVision J100 specifications">
+                            <li><strong>Tank Capacity</strong><span>26.4 gal</span></li>
+                            <li><strong>Spray Width</strong><span>Up to 39 ft</span></li>
+                            <li><strong>Speed</strong><span>18 mph</span></li>
+                            <li><strong>Coverage</strong><span>35+ ac/hr</span></li>
+                            <li><strong>Network</strong><span>3 units</span></li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+        <p class="fleet-scroll-hint" aria-hidden="true">Swipe to see all aircraft &rarr;</p>
+    </div>
+</section>
+
+<!-- ============================================
+     COVERAGE
+     ============================================ -->
+<section class="coverage on-dark" id="coverage" aria-labelledby="coverage-heading">
+    <div class="container">
+        <div class="coverage-grid">
+            <div class="fade-up">
+                <div class="section-label">Service Area</div>
+                <h2 class="section-title" id="coverage-heading">Wisconsin<br>&amp; Minnesota</h2>
+                <div class="coverage-map-visual" role="img" aria-label="Map showing Loke Drone LC service area centered on Chetek, Wisconsin with approximately 250 mile radius">
+                    <div class="coverage-pulse"><div class="coverage-dot"></div></div>
+                    <div class="cov-map-lbl">Chetek, WI — Base of Operations</div>
+                    <div class="cov-map-lbl2">~250 Mile Service Radius</div>
+                </div>
+                <div class="verification-wrap" aria-label="Verified by US Drone Map">
+                    <a href="https://usdronemap.com" target="_blank" rel="noopener" aria-label="View Loke Drone LC on US Drone Map (opens in new tab)">
+                        <img src="images/usdronemap-badge.svg" alt="Verified on US Drone Map" width="180" height="42">
+                    </a>
+                </div>
+            </div>
+            <div class="coverage-features" role="list">
+                <div class="cov-feat fade-up" role="listitem">
+                    <div class="cov-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="cov-feat-text">
+                        <h4>Centrally Located</h4>
+                        <p>Based in Chetek, WI — central to western Wisconsin and the Minnesota border. We can mobilize quickly to farms across both states without excessive drive time added to your bill.</p>
+                    </div>
+                </div>
+                <div class="cov-feat fade-up" style="transition-delay:0.1s" role="listitem">
+                    <div class="cov-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="cov-feat-text">
+                        <h4>CCA-Backed Applications</h4>
+                        <p>Both lead pilots hold Certified Crop Advisor credentials. We advise on product, rate, and timing — not just fly the route. You're getting agronomic judgment with every application.</p>
+                    </div>
+                </div>
+                <div class="cov-feat fade-up" style="transition-delay:0.2s" role="listitem">
+                    <div class="cov-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="cov-feat-text">
+                        <h4>Same-Week Scheduling</h4>
+                        <p>Weather windows don't wait and neither do we. We're often able to schedule within the same week. Call us when you need to move fast — we'll do our best to make it happen.</p>
+                    </div>
+                </div>
+                <div class="cov-feat fade-up" style="transition-delay:0.3s" role="listitem">
+                    <div class="cov-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <div class="cov-feat-text">
+                        <h4>Thermal Deer Recovery</h4>
+                        <p>Running our Matrice 4T for post-harvest deer recovery and lost livestock searches. The thermal camera finds what you can't see on foot. Available across the region during hunting season.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     FAQ
+     ============================================ -->
+<section class="faq on-cream" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+        <div class="faq-layout">
+            <div>
+                <div class="section-label">Common Questions</div>
+                <h2 class="section-title" id="faq-heading">Questions<br>Farmers Ask</h2>
+                <p class="faq-intro-text">We work with farmers every day and the same questions come up. Here are honest answers to the ones we hear most.</p>
+                <div class="faq-contact-nudge">
+                    <p>Don't see your question answered? Call us directly — we're happy to talk through your specific situation.</p>
+                    <a href="tel:+17157972428" aria-label="Call Sig at (715) 797-2428">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6.06 6.06l.98-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        (715) 797-2428
+                    </a>
+                </div>
+            </div>
+
+            <div class="faq-list" role="list">
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
+                        How much does drone spraying cost?
+                        <span class="faq-q-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-a" id="faq-a-1" role="region">
+                        <div class="faq-a-inner">Pricing starts at a $400 job minimum, with most applications running $7–$11 per acre depending on crop type, product used, and field conditions. We'll give you a clear, itemized quote before any work begins — no hidden fees or surprises. Use our calculator above for an instant ballpark estimate.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
+                        How many acres can your drones spray per hour?
+                        <span class="faq-q-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-a" id="faq-a-2" role="region">
+                        <div class="faq-a-inner">Our DJI T50 units cover 30+ acres per hour and our flagship DJI T100 covers 55–70+ acres per hour in real-world field conditions. The exact rate depends on application type, field shape, swath width, and product. We'll give you a realistic production estimate for your specific field when you request a quote.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
+                        Can drones spray in wet or muddy conditions?
+                        <span class="faq-q-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-a" id="faq-a-3" role="region">
+                        <div class="faq-a-inner">Yes — this is one of the biggest advantages we offer. Because our aircraft never enter the field, wet soil conditions do not affect us. We can apply fungicide or seed when your ground rig would be stuck or causing compaction damage. We do need reasonable flying conditions — calm wind, no rain during application — but field surface conditions don't matter.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
+                        What is the minimum acreage you'll treat?
+                        <span class="faq-q-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-a" id="faq-a-4" role="region">
+                        <div class="faq-a-inner">We have a $400 minimum job charge rather than a minimum acreage. For smaller fields, we can often combine your job with neighboring farms in the same area to keep things cost-efficient for everyone. Call us and we'll figure out the best approach for your situation.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">
+                        Do your pilots have crop advisor certifications?
+                        <span class="faq-q-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-a" id="faq-a-5" role="region">
+                        <div class="faq-a-inner">Yes. Both of our lead pilots are Certified Crop Advisors (CCA) — Sigurd Lindquist (CCA #813089) and Kevin Austin (CCA #736466). This isn't common in the drone spraying industry. It means we advise on proper rates, product selection, and timing rather than just executing a flight plan someone else wrote. You're getting agronomic expertise alongside the application service.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6">
+                        What is frost seeding and when is it done?
+                        <span class="faq-q-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-a" id="faq-a-6" role="region">
+                        <div class="faq-a-inner">Frost seeding is an early spring technique where seed is broadcast onto frozen or thawing ground. The natural freeze-thaw cycle works the seed into the soil without tillage or equipment. It's typically done in late February through March in Wisconsin, depending on conditions. We use aerial application — which means zero equipment in the field and no compaction during the sensitive early spring period.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-q" aria-expanded="false" aria-controls="faq-a-7">
+                        What is thermal deer recovery?
+                        <span class="faq-q-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-a" id="faq-a-7" role="region">
+                        <div class="faq-a-inner">After a successful hunt, recovering a deer in thick timber or rough terrain can be extremely difficult or impossible on foot. We fly our Matrice 4T thermal camera drone over the search area and detect heat signatures invisible to the naked eye. We can cover ground in minutes that would take hours on foot. We also assist with lost livestock, missing pets, and search operations. Contact us directly to discuss availability during hunting season.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section class="testimonials on-dark" id="testimonials" aria-labelledby="testi-heading">
+    <div class="container">
+        <div class="section-label">What Farmers Say</div>
+        <h2 class="section-title" id="testi-heading" style="margin-bottom:48px">Field Reports</h2>
+        <div class="testimonials-grid">
+
+            <article class="testi-card fade-up" aria-label="Testimonial from Mike Johnson">
+                <div class="testi-rating" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testi-quote">"Covered 200 acres in a fraction of the time it would've taken with traditional equipment, and the coverage was better too. We couldn't believe how fast they moved."</blockquote>
+                <div class="testi-author">
+                    <strong>Mike Johnson</strong>
+                    <span>Corn &amp; Soybean Farm · Barron County, WI</span>
+                </div>
+            </article>
+
+            <article class="testi-card fade-up" style="transition-delay:0.1s" aria-label="Testimonial from Sarah Anderson">
+                <div class="testi-rating" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testi-quote">"Got our cover crop seeded into standing corn without any issues. The precision and efficiency saved us real time and money. Highly recommend their services."</blockquote>
+                <div class="testi-author">
+                    <strong>Sarah Anderson</strong>
+                    <span>Organic Farm · Polk County, WI</span>
+                </div>
+            </article>
+
+            <article class="testi-card fade-up" style="transition-delay:0.2s" aria-label="Testimonial from Tom Peterson">
+                <div class="testi-rating" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testi-quote">"Professional from start to finish. They worked around the weather window and got our fields treated exactly when we needed it. Pricing was transparent and fair."</blockquote>
+                <div class="testi-author">
+                    <strong>Tom Peterson</strong>
+                    <span>Dairy Farm · Chisago County, MN</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     CONTACT
+     ============================================ -->
+<section class="contact on-light" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title" id="contact-heading" style="margin-bottom:48px">Request<br>a Quote</h2>
+        <div class="contact-grid">
+
+            <div class="contact-block" aria-label="Contact information">
+                <h3>Loke Drone LC</h3>
+                <div class="contact-row">
+                    <span class="contact-key">Location</span>
+                    <span class="contact-val">Chetek, Wisconsin</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-key">Mailing</span>
+                    <span class="contact-val">PO Box 243<br>Chetek, WI 54728</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-key">Area</span>
+                    <span class="contact-val">Wisconsin &amp; Minnesota</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-key">Email</span>
+                    <span class="contact-val"><a href="mailto:info@lokedrone.com">info@lokedrone.com</a></span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-key">Cert. Crop<br>Advisors</span>
+                    <div>
+                        <div class="pilot-card" aria-label="Sigurd Lindquist, CCA">
+                            <div class="pilot-name">Sigurd R. Lindquist</div>
+                            <div class="pilot-cca">Certified Crop Advisor · #813089</div>
+                            <div class="pilot-phone"><a href="tel:+17157972428" aria-label="Call Sigurd at (715) 797-2428">(715) 797-2428</a></div>
+                        </div>
+                        <div class="pilot-card" aria-label="Kevin Austin, CCA">
+                            <div class="pilot-name">Kevin J. Austin</div>
+                            <div class="pilot-cca">Certified Crop Advisor · #736466</div>
+                            <div class="pilot-phone"><a href="tel:+17156411239" aria-label="Call Kevin at (715) 641-1239">(715) 641-1239</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMSPREE FORM — replace YOUR_FORM_ID with your Formspree form ID from formspree.io -->
+            <form
+                class="contact-form-wrap"
+                id="contactForm"
+                action="https://formspree.io/f/YOUR_FORM_ID"
+                method="POST"
+                novalidate
+                aria-label="Contact and quote request form"
+            >
+                <!-- Honeypot spam prevention -->
+                <div class="hp-field" aria-hidden="true">
+                    <label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+                </div>
+                <!-- Redirect after submission (Formspree) -->
+                <input type="hidden" name="_next" value="https://lokedrone.com/#contact">
+                <input type="hidden" name="_subject" value="New Quote Request — Loke Drone LC">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name">Your Name <span aria-label="required">*</span></label>
+                        <input type="text" id="contact-name" name="name" placeholder="John Smith" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" name="phone" placeholder="(715) 000-0000" autocomplete="tel">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email Address <span aria-label="required">*</span></label>
+                    <input type="email" id="contact-email" name="email" placeholder="your@email.com" required autocomplete="email">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-service">Service Needed</label>
+                        <select id="contact-service" name="service" aria-label="Select service needed">
+                            <option value="">Select a service</option>
+                            <option value="crop-spraying">Crop Spraying</option>
+                            <option value="cover-crop">Cover Crop Seeding</option>
+                            <option value="frost-seeding">Frost Seeding</option>
+                            <option value="thermal-deer">Thermal / Deer Recovery</option>
+                            <option value="ndvi-mapping">NDVI Mapping</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-acres">Approx. Acres</label>
+                        <input type="number" id="contact-acres" name="acres" placeholder="e.g. 300" min="1" aria-describedby="acres-desc">
+                        <span id="acres-desc" style="font-size:0.75rem;color:var(--text-muted);margin-top:2px">No minimum acreage required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contact-notes">Additional Details</label>
+                    <textarea id="contact-notes" name="notes" placeholder="Field location, crop type, target timing window, any special conditions we should know about..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Quote Request</button>
+                <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+                    Message received. We'll follow up within 24 hours.
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer" role="contentinfo">
+    <div class="footer-main">
+        <div class="footer-brand">
+            <img src="logo.png" alt="Loke Drone LC" width="144" height="36">
+            <div class="footer-brand-name">Loke Drone LC</div>
+            <div class="footer-brand-sub">AAOC #23021A · Chetek, Wisconsin</div>
+            <p class="footer-brand-desc">Professional agricultural drone services for Wisconsin and Minnesota farms. FAA licensed, CCA certified, same-week scheduling.</p>
+        </div>
+        <div>
+            <div class="footer-col-title">Quick Links</div>
+            <ul class="footer-links-list">
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#fleet">Aircraft Fleet</a></li>
+                <li><a href="#coverage">Service Area</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Get a Quote</a></li>
+                <li><a href="https://usdronemap.com" target="_blank" rel="noopener">US Drone Map</a></li>
             </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1>Precision Agriculture from Above</h1>
-            <p class="hero-subtitle">Professional drone services for crop spraying, seeding, and more</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">2</span>
-                    <span class="stat-label">States Served</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">10,000+</span>
-                    <span class="stat-label">Acres Treated</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-number">4+</span>
-                    <span class="stat-label">Professional Drones</span>
-                </div>
+        <div>
+            <div class="footer-col-title">Contact</div>
+            <div class="footer-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>PO Box 243, Chetek, WI 54728</span>
             </div>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Contact Us</a>
-                <a href="#services" class="btn btn-secondary">Our Services</a>
+            <div class="footer-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6.06 6.06l.98-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span><a href="tel:+17157972428">(715) 797-2428</a> — Sig<br><a href="tel:+17156411239">(715) 641-1239</a> — Kevin</span>
             </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive drone solutions for modern agriculture</p>
+            <div class="footer-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span><a href="mailto:info@lokedrone.com">info@lokedrone.com</a></span>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🌾</div>
-                    <h3>Crop Spraying</h3>
-                    <p>Precise application of pesticides, herbicides, and fungicides with advanced drone technology. Reduce chemical use and minimize soil compaction.</p>
-                    <ul class="service-benefits">
-                        <li>Even coverage across terrain</li>
-                        <li>Access to wet or difficult fields</li>
-                        <li>Reduced crop damage</li>
-                        <li>Fast application times</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌱</div>
-                    <h3>Cover Crop Seeding</h3>
-                    <p>Efficient aerial seeding for cover crops that protect and enrich your soil. Perfect for establishing winter cover or companion planting.</p>
-                    <ul class="service-benefits">
-                        <li>Quick field coverage</li>
-                        <li>Seed in standing crops</li>
-                        <li>Minimal soil disturbance</li>
-                        <li>Optimal seed distribution</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">❄️</div>
-                    <h3>Frost Seeding</h3>
-                    <p>Take advantage of freeze-thaw cycles with precision frost seeding. Establish pastures and forage crops with minimal equipment.</p>
-                    <ul class="service-benefits">
-                        <li>Early spring seeding</li>
-                        <li>No field entry required</li>
-                        <li>Cost-effective establishment</li>
-                        <li>Improved seed-to-soil contact</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="equipment-section" id="fleet">
-                <h3>Our Professional Fleet</h3>
-                <div class="fleet-grid">
-                    <div class="fleet-item">
-                        <div class="fleet-image">
-                            <img src="images/t50.jpg" alt="DJI T50 Drone" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="fleet-placeholder">
-                                <span>📷</span>
-                                <p>DJI T50</p>
-                            </div>
-                        </div>
-                        <div class="fleet-info">
-                            <h4>DJI T50</h4>
-                            <span class="fleet-quantity">2 Units</span>
-                            <p>High-capacity spraying drone with advanced precision</p>
-                            <ul class="fleet-specs">
-                                <li><strong>Tank Capacity:</strong> 13.2 gallons</li>
-                                <li><strong>Spray Width:</strong> Up to 36 ft</li>
-                                <li><strong>Operating Speed:</strong> Up to 21 mph</li>
-                                <li><strong>Coverage:</strong> 30+ acres/hour</li>
-                                <li><strong>Flight Time:</strong> 14-18 minutes</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="fleet-item">
-                        <div class="fleet-image">
-                            <img src="images/t100.jpg" alt="DJI T100 Drone" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="fleet-placeholder">
-                                <span>📷</span>
-                                <p>DJI T100</p>
-                            </div>
-                        </div>
-                        <div class="fleet-info">
-                            <h4>DJI T100 <span class="new-badge">NEW</span></h4>
-                            <span class="fleet-quantity">1 Unit</span>
-                            <p>Large-scale operations and extensive coverage</p>
-                            <ul class="fleet-specs">
-                                <li><strong>Tank Capacity:</strong> 26.4 gallons</li>
-                                <li><strong>Spray Width:</strong> Up to 39 ft</li>
-                                <li><strong>Operating Speed:</strong> Up to 45 mph</li>
-                                <li><strong>Coverage:</strong> 40+ acres/hour</li>
-                                <li><strong>Flight Time:</strong> 10-15 minutes</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="fleet-item">
-                        <div class="fleet-image">
-                            <img src="images/matrice4t.jpg" alt="Matrice 4T" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="fleet-placeholder">
-                                <span>📷</span>
-                                <p>Matrice 4T</p>
-                            </div>
-                        </div>
-                        <div class="fleet-info">
-                            <h4>Matrice 4T</h4>
-                            <span class="fleet-quantity">1 Unit</span>
-                            <p>Aerial mapping, crop monitoring, deer recovery, lost pet & people search</p>
-                            <ul class="fleet-specs">
-                                <li><strong>Camera:</strong> 48MP RGB + thermal</li>
-                                <li><strong>Operating Speed:</strong> Up to 45 mph</li>
-                                <li><strong>Flight Time:</strong> Up to 55 minutes</li>
-                                <li><strong>Range:</strong> 12.4 mile transmission</li>
-                                <li><strong>Purpose:</strong> NDVI mapping, search & recovery</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="fleet-item">
-                        <div class="fleet-image">
-                            <img src="images/j100.jpg" alt="EAVision J100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="fleet-placeholder">
-                                <span>📷</span>
-                                <p>EAVision J100</p>
-                            </div>
-                        </div>
-                        <div class="fleet-info">
-                            <h4>EAVision J100</h4>
-                            <span class="fleet-quantity">Subcontractors</span>
-                            <p>Extended network for maximum coverage capacity</p>
-                            <ul class="fleet-specs">
-                                <li><strong>Tank Capacity:</strong> 26.4 gallons</li>
-                                <li><strong>Spray Width:</strong> Up to 39 ft</li>
-                                <li><strong>Operating Speed:</strong> Up to 18 mph</li>
-                                <li><strong>Coverage:</strong> 35+ acres/hour</li>
-                                <li><strong>Network:</strong> 3 subcontractor units</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="service-area">
-        <div class="container">
-            <div class="section-header">
-                <h2>Coverage Across Wisconsin & Minnesota</h2>
-                <p>Fast, reliable service when you need it most</p>
-            </div>
-            <div class="area-content">
-                <div class="area-grid">
-                    <div class="area-feature">
-                        <div class="feature-icon">📍</div>
-                        <h3>Chetek, WI</h3>
-                        <p>Centrally located to serve farms throughout both states efficiently</p>
-                    </div>
-                    <div class="area-feature">
-                        <div class="feature-icon">👥</div>
-                        <h3>Expert Team</h3>
-                        <p>2 Certified Crop Advisors (CCA) plus 3 experienced subcontractor pilots ready to fly</p>
-                    </div>
-                    <div class="area-feature">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Quick Turnaround</h3>
-                        <p>Contact us for coverage confirmation and same-week scheduling availability</p>
-                    </div>
-                </div>
-            </div>
-            <div class="verification-section">
-                <a href="https://usdronemap.com" target="_blank" class="verification-badge-link">
-                    <img src="images/usdronemap-badge.svg" alt="Verified on US Drone Map">
+            <div class="footer-badge" style="margin-top:20px">
+                <a href="https://usdronemap.com" target="_blank" rel="noopener" aria-label="Verified on US Drone Map">
+                    <img src="images/usdronemap-badge.svg" alt="Verified on US Drone Map" width="160" height="36">
                 </a>
             </div>
         </div>
-    </section>
-
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our Clients Say</h2>
-                <p>Real results from farms across Wisconsin and Minnesota</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Loke Drone made crop spraying so much easier. They covered 200 acres in a fraction of the time it would have taken with traditional equipment, and we saw better coverage too."</p>
-                    <div class="testimonial-author">
-                        <strong>Mike Johnson</strong>
-                        <span>Corn & Soybean Farm, Barron County, WI</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"We were able to get our cover crop seeded into standing corn without any issues. The precision and efficiency saved us time and money. Highly recommend their services."</p>
-                    <div class="testimonial-author">
-                        <strong>Sarah Anderson</strong>
-                        <span>Organic Farm, Polk County, WI</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Professional service from start to finish. They worked around the weather and got our fields treated exactly when needed. The pricing was transparent and fair."</p>
-                    <div class="testimonial-author">
-                        <strong>Tom Peterson</strong>
-                        <span>Dairy Farm, Chisago County, MN</span>
-                    </div>
-                </div>
-            </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+            <span class="footer-copy">© 2025 Loke Drone LC · All Rights Reserved · Chetek, WI</span>
+            <span class="footer-copy">Wisconsin &amp; Minnesota Agricultural Drone Services</span>
         </div>
-    </section>
+    </div>
+</footer>
 
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+    <a href="tel:+17157972428" class="mobile-cta-call" aria-label="Call us at (715) 797-2428">Call Now</a>
+    <a href="#contact" class="mobile-cta-quote" aria-label="Request a quote">Get a Quote</a>
+</div>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to discuss your agricultural drone service needs?</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Loke Drone LC</h3>
-                    <div class="contact-item">
-                        <strong>Location:</strong>
-                        <p>Chetek, Wisconsin</p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Mailing Address:</strong>
-                        <p>PO Box 243<br>Chetek, WI 54728</p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Service Area:</strong>
-                        <p>Wisconsin & Minnesota</p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Certified Crop Advisors:</strong>
-                        <div class="cca-contacts">
-                            <div class="cca-person">
-                                <p><strong>Sigurd R. Lindquist</strong></p>
-                                <p class="cca-number">CCA 813089</p>
-                                <p><a href="tel:+17157972428">(715) 797-2428</a></p>
-                            </div>
-                            <div class="cca-person">
-                                <p><strong>Kevin J. Austin</strong></p>
-                                <p class="cca-number">CCA 736466</p>
-                                <p><a href="tel:+17156411239">(715) 641-1239</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Email:</strong>
-                        <p><a href="/cdn-cgi/l/email-protection#0b62656d644b6764606e6f7964656e25686466"><span class="__cf_email__" data-cfemail="dfb6b1b9b09fb3b0b4babbadb0b1baf1bcb0b2">[email&#160;protected]</span></a></p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Our Team:</strong>
-                        <p>In addition to our certified crop advisors, we work with three experienced subcontractors to ensure fast, reliable service across our entire coverage area.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+/* ============================================
+   NAVBAR
+   ============================================ */
+const navbar = document.getElementById('navbar');
+const mobileToggle = document.getElementById('mobileToggle');
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="logo.png" alt="Loke Drone LC" class="footer-logo">
-                    <h3>Loke Drone LC</h3>
-                    <p>Professional Agricultural Drone Services</p>
-                    <div class="footer-affiliations">
-                        <p>AAOC #23021A</p>
-                        <a href="https://usdronemap.com" target="_blank" class="verification-badge-footer">
-                            <img src="images/usdronemap-badge.svg" alt="Verified on US Drone Map">
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#fleet">Our Fleet</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Loke Drone
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+mobileToggle.addEventListener('click', () => {
+    const isOpen = navbar.classList.toggle('nav-open');
+    mobileToggle.setAttribute('aria-expanded', isOpen);
+});
+
+document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+        navbar.classList.remove('nav-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+    });
+});
+
+/* ============================================
+   SMOOTH SCROLL
+   ============================================ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            const offset = window.innerWidth < 900 ? 68 : 68;
+            window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        }
+    });
+});
+
+/* ============================================
+   COUNTER ANIMATION
+   ============================================ */
+function animateCounter(el) {
+    const target = parseInt(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    if (target === 0) { el.textContent = '0' + suffix; return; }
+    let current = 0;
+    const duration = 1600;
+    const start = performance.now();
+    function step(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // ease out cubic
+        current = Math.round(eased * target);
+        el.textContent = (target >= 1000 ? current.toLocaleString() : current) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+}
+
+const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelectorAll('[data-count]').forEach(animateCounter);
+            counterObs.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.hero-stats, .proof-bar-inner').forEach(el => counterObs.observe(el));
+
+/* ============================================
+   FADE UP ANIMATION
+   ============================================ */
+const fadeObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+
+/* ============================================
+   SERVICE CARD SPOTLIGHT
+   ============================================ */
+document.querySelectorAll('.svc-card').forEach(card => {
+    const spotlight = card.querySelector('.svc-spotlight');
+    if (!spotlight) return;
+    card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        spotlight.style.left = x + 'px';
+        spotlight.style.top = y + 'px';
+    });
+});
+
+/* ============================================
+   FAQ ACCORDION
+   ============================================ */
+document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const answer = item.querySelector('.faq-a');
+    if (!btn || !answer) return;
+
+    btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-a').style.maxHeight = '0';
+        });
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+    });
+});
+
+/* ============================================
+   QUOTE CALCULATOR
+   ============================================ */
+const ACRE_RATES = {
+    corn:    { low: 7, high: 10 },
+    soy:     { low: 7, high: 10 },
+    wheat:   { low: 6, high: 9  },
+    alfalfa: { low: 8, high: 11 },
+    other:   { low: 7, high: 11 },
+    default: { low: 7, high: 11 },
+};
+
+const COVERAGE_AC_HR = {
+    fungicide: 32, herbicide: 30, insecticide: 30,
+    seeding: 24, frost: 27, default: 30
+};
+
+function calculateQuote() {
+    const acres = parseInt(document.getElementById('acres').value);
+    const crop = document.getElementById('cropType').value || 'default';
+    const app = document.getElementById('appType').value || 'default';
+    const county = document.getElementById('county').value.trim();
+
+    if (!acres || isNaN(acres) || acres < 1) {
+        document.getElementById('acres').focus();
+        return;
+    }
+
+    const rate = ACRE_RATES[crop] || ACRE_RATES.default;
+    const acPerHr = COVERAGE_AC_HR[app] || COVERAGE_AC_HR.default;
+    const low = Math.max(400, Math.round(acres * rate.low));
+    const high = Math.max(400, Math.round(acres * rate.high));
+    const hours = (acres / acPerHr).toFixed(1);
+
+    document.getElementById('hoursResult').textContent = hours;
+    document.getElementById('costResult').textContent = '$' + low.toLocaleString() + '–$' + high.toLocaleString();
+
+    let note = 'Estimate for ' + acres.toLocaleString() + ' acres';
+    if (county) note += ' in ' + county;
+    note += '. Actual price depends on product, field conditions, and mobilization distance. $400 minimum per job. Call to confirm.';
+    document.getElementById('resultNote').textContent = note;
+
+    document.getElementById('calcResult').classList.add('visible');
+    document.getElementById('toEmailBtn').style.display = 'block';
+    document.getElementById('calcBtn').textContent = 'Recalculate';
+
+    // GA event
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'quote_calculated', { event_category: 'calculator', event_label: crop + '-' + app, value: Math.round((low + high) / 2) });
+    }
+}
+
+function goToEmail() {
+    const acres = document.getElementById('acres').value;
+    document.getElementById('summaryAcres').textContent = parseInt(acres).toLocaleString();
+    document.getElementById('step1').classList.remove('active');
+    document.getElementById('step2').classList.add('active');
+}
+
+function goBack() {
+    document.getElementById('step2').classList.remove('active');
+    document.getElementById('step1').classList.add('active');
+}
+
+function submitEmail() {
+    const email = document.getElementById('emailInput').value.trim();
+    if (!email || !email.includes('@') || !email.includes('.')) {
+        document.getElementById('emailInput').focus();
+        return;
+    }
+
+    const data = {
+        email,
+        name: document.getElementById('nameInput').value.trim(),
+        acres: document.getElementById('acres').value,
+        crop: document.getElementById('cropType').value,
+        app: document.getElementById('appType').value,
+        county: document.getElementById('county').value.trim(),
+        low: document.getElementById('costResult').textContent,
+        ts: new Date().toISOString(),
+    };
+
+    console.log('Calculator lead:', data);
+
+    // To connect to Formspree, uncomment and set your endpoint:
+    // fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ ...data, _subject: 'Calculator Quote Lead — Loke Drone' })
+    // });
+
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'quote_lead', { event_category: 'lead', event_label: data.crop, value: 1 });
+    }
+
+    document.getElementById('step2').classList.remove('active');
+    document.getElementById('step3').classList.add('active');
+}
+
+document.getElementById('acres').addEventListener('keydown', e => {
+    if (e.key === 'Enter') calculateQuote();
+});
+
+/* ============================================
+   CONTACT FORM (AJAX fallback for non-Formspree)
+   ============================================ */
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        const action = this.getAttribute('action');
+        // If Formspree ID is not set, intercept and show success anyway
+        if (action.includes('YOUR_FORM_ID')) {
+            e.preventDefault();
+            const success = document.getElementById('formSuccess');
+            success.classList.add('visible');
+            this.reset();
+            setTimeout(() => success.classList.remove('visible'), 7000);
+            return;
+        }
+        // Otherwise let Formspree handle it natively (or use AJAX below)
+        e.preventDefault();
+        const data = new FormData(this);
+        try {
+            const res = await fetch(action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+            if (res.ok) {
+                const success = document.getElementById('formSuccess');
+                success.classList.add('visible');
+                this.reset();
+                setTimeout(() => success.classList.remove('visible'), 7000);
+    if (typeof gtag !== 'undefined') gtag('event', 'form_submit', { event_category: 'lead' });
+            }
+        } catch (err) { console.error(err); }
+    });
+}
+</script>
+</body>
+</html>
