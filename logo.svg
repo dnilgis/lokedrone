@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60" width="120" height="60" role="img" aria-label="Loke Drone">
+  <text x="0" y="27"
+    font-family="'Barlow Condensed', sans-serif"
+    font-size="30" font-weight="900" letter-spacing="2"
+    fill="#878d9c"
+    stroke="#e04d0a" stroke-width="0.6" paint-order="stroke fill">LOKE</text>
+  <text x="0" y="53"
+    font-family="'Barlow Condensed', sans-serif"
+    font-size="30" font-weight="900" letter-spacing="2"
+    fill="#e04d0a"
+    stroke="#878d9c" stroke-width="0.6" paint-order="stroke fill">DRONE</text>
+</svg>
