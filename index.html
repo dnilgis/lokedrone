@@ -2982,7 +2982,7 @@ section { padding: 96px 40px; width: 100%; }
             <form
                 class="contact-form-wrap"
                 id="contactForm"
-                action="https://formspree.io/f/YOUR_FORM_ID"
+                action="https://formspree.io/f/mykdnwwn"
                 method="POST"
                 novalidate
                 aria-label="Contact and quote request form"
@@ -3342,28 +3342,40 @@ function submitEmail() {
         return;
     }
 
+    const acres  = document.getElementById('acres').value;
+    const crop   = document.getElementById('cropType').value;
+    const app    = document.getElementById('appType').value;
+    const county = document.getElementById('county').value.trim();
+    const quote  = document.getElementById('costResult').textContent;
+    const name   = document.getElementById('nameInput').value.trim();
+
     const data = {
+        _subject: `Calculator Quote Lead — ${acres} acres · ${quote} — Loke Drone`,
+        name:    name || '(not provided)',
         email,
-        name: document.getElementById('nameInput').value.trim(),
-        acres: document.getElementById('acres').value,
-        crop: document.getElementById('cropType').value,
-        app: document.getElementById('appType').value,
-        county: document.getElementById('county').value.trim(),
-        low: document.getElementById('costResult').textContent,
-        ts: new Date().toISOString(),
+        acres,
+        crop_type:   crop   || '(not selected)',
+        application: app    || '(not selected)',
+        county:      county || '(not provided)',
+        estimated_quote: quote,
+        submitted_at: new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' }),
     };
 
-    console.log('Calculator lead:', data);
-
-    // To connect to Formspree, uncomment and set your endpoint:
-    // fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ ...data, _subject: 'Calculator Quote Lead — Loke Drone' })
-    // });
+    try {
+        const res = await fetch('https://formspree.io/f/mykdnwwn', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(data),
+        });
+        if (!res.ok) {
+            console.error('Formspree error:', res.status);
+        }
+    } catch (err) {
+        console.error('Calculator submission error:', err);
+    }
 
     if (typeof gtag !== 'undefined') {
-        gtag('event', 'quote_lead', { event_category: 'lead', event_label: data.crop, value: 1 });
+        gtag('event', 'quote_lead', { event_category: 'lead', event_label: crop, value: 1 });
     }
 
     document.getElementById('step2').classList.remove('active');
@@ -3375,34 +3387,47 @@ document.getElementById('acres').addEventListener('keydown', e => {
 });
 
 /* ============================================
-   CONTACT FORM (AJAX fallback for non-Formspree)
+   CONTACT FORM — wired to Formspree mykdnwwn
    ============================================ */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
-        const action = this.getAttribute('action');
-        // If Formspree ID is not set, intercept and show success anyway
-        if (action.includes('YOUR_FORM_ID')) {
-            e.preventDefault();
-            const success = document.getElementById('formSuccess');
-            success.classList.add('visible');
-            this.reset();
-            setTimeout(() => success.classList.remove('visible'), 7000);
-            return;
-        }
-        // Otherwise let Formspree handle it natively (or use AJAX below)
         e.preventDefault();
+        const btn = this.querySelector('.btn-submit');
+        const success = document.getElementById('formSuccess');
+        const origText = btn.textContent;
+
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+
         const data = new FormData(this);
+
         try {
-            const res = await fetch(action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+            const res = await fetch('https://formspree.io/f/mykdnwwn', {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
             if (res.ok) {
-                const success = document.getElementById('formSuccess');
+                success.textContent = '✓ Message received. We\'ll follow up within 24 hours.';
+                success.style.color = 'var(--green)';
                 success.classList.add('visible');
                 this.reset();
-                setTimeout(() => success.classList.remove('visible'), 7000);
-    if (typeof gtag !== 'undefined') gtag('event', 'form_submit', { event_category: 'lead' });
+                if (typeof gtag !== 'undefined') gtag('event', 'form_submit', { event_category: 'lead' });
+            } else {
+                success.textContent = 'Something went wrong — please call us directly at (715) 797-2428.';
+                success.style.color = 'var(--orange)';
+                success.classList.add('visible');
             }
-        } catch (err) { console.error(err); }
+        } catch (err) {
+            success.textContent = 'Network error — please call us at (715) 797-2428 or email info@lokedrone.com.';
+            success.style.color = 'var(--orange)';
+            success.classList.add('visible');
+        }
+
+        btn.textContent = origText;
+        btn.disabled = false;
+        setTimeout(() => success.classList.remove('visible'), 9000);
     });
 }
 </script>
