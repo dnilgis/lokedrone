@@ -49,6 +49,9 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Mono:wght@300;400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Add .js class immediately so fade-up animations only hide elements when JS is running -->
+    <script>document.documentElement.classList.add('js');</script>
+
     <!-- Google Analytics 4 (async — does not block render) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HG9KCG76F2"></script>
     <script>
@@ -1428,6 +1431,7 @@ section { padding: 96px 40px; width: 100%; }
     gap: 20px;
     transition: color 0.2s;
     font-size: 1.1rem;          /* was 1.05 */
+}
 
 .faq-q:hover { color: var(--orange); }
 
@@ -1481,7 +1485,7 @@ section { padding: 96px 40px; width: 100%; }
 .testi-card:hover { border-top-color: var(--orange); background: var(--slate-2); }
 
 .testi-rating { display: flex; gap: 3px; margin-bottom: 20px; }
-.testi-rating svg { width: 16px; height: 16px; fill: #f5a623; }
+.testi-rating svg { width: 16px !important; height: 16px !important; fill: #f5a623 !important; flex-shrink: 0; }
 
 .testi-quote {
     font-size: 1.05rem;         /* was 1.0 */
@@ -1776,15 +1780,16 @@ section { padding: 96px 40px; width: 100%; }
 }
 
 /* ============================================
-   ANIMATIONS
+   ANIMATIONS — gated on .js class so elements
+   are visible by default if JS doesn't run
    ============================================ */
-.fade-up {
+.js .fade-up {
     opacity: 0;
     transform: translateY(22px);
     transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
-.fade-up.visible { opacity: 1; transform: translateY(0); }
+.js .fade-up.visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================
    RESPONSIVE
@@ -1858,9 +1863,9 @@ section { padding: 96px 40px; width: 100%; }
 }
 
 .pricing-desc {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--text-dim);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.8;
     margin-top: 16px;
     margin-bottom: 24px;
@@ -1874,10 +1879,10 @@ section { padding: 96px 40px; width: 100%; }
     border: 1px solid var(--border-orange);
     border-left: 3px solid var(--orange);
     padding: 14px 16px;
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     color: var(--text-dim);
-    font-weight: 300;
-    line-height: 1.65;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
 .pricing-table-wrap {
@@ -1893,7 +1898,7 @@ section { padding: 96px 40px; width: 100%; }
 
 .pricing-table thead th {
     font-family: var(--font-m);
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--text-muted);
@@ -1934,7 +1939,7 @@ section { padding: 96px 40px; width: 100%; }
 .tier-range {
     display: block;
     font-family: var(--font-m);
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1950,7 +1955,7 @@ section { padding: 96px 40px; width: 100%; }
 
 .per-ac {
     font-family: var(--font-m);
-    font-size: 0.7rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
     font-weight: 400;
     margin-left: 2px;
@@ -1958,13 +1963,13 @@ section { padding: 96px 40px; width: 100%; }
 
 .tier-example {
     font-family: var(--font-m);
-    font-size: 0.78rem;
-    color: var(--text-muted);
+    font-size: 0.88rem;
+    color: var(--text-dim);
 }
 
 .tier-total {
     font-family: var(--font-d);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--text-dim);
 }
@@ -2004,7 +2009,7 @@ section { padding: 96px 40px; width: 100%; }
 
 .tier-call-link {
     font-family: var(--font-m);
-    font-size: 0.8rem;
+    font-size: 0.92rem;
     color: var(--orange);
     text-decoration: none;
     letter-spacing: 0.04em;
@@ -2014,51 +2019,54 @@ section { padding: 96px 40px; width: 100%; }
 .tier-call-link:hover { color: var(--orange-light); text-decoration: underline; }
 
 .pricing-footnote {
-    padding: 16px 24px;
-    font-size: 0.88rem;
-    color: var(--text-muted);
+    padding: 18px 24px;
+    font-size: 0.97rem;
+    color: var(--text-dim);
     border-top: 1px solid var(--cream-2);
-    line-height: 1.65;
+    line-height: 1.75;
     background: var(--cream-1);
 }
 
-.pricing-footnote strong { color: var(--text-dim); }
+.pricing-footnote strong { color: var(--text); font-weight: 700; }
 
 .pricing-cta-row {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     padding: 20px 24px;
     border-top: 1px solid var(--cream-2);
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .pricing-cta-btn {
     font-family: var(--font-b);
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 13px 28px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 14px 32px;
     background: var(--orange);
     color: #fff;
     text-decoration: none;
     transition: background 0.2s;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .pricing-cta-btn:hover { background: var(--orange-light); }
 
 .pricing-cta-call {
     font-family: var(--font-b);
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.05rem;
+    font-weight: 600;
     color: var(--text-dim);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 8px;
     transition: color 0.2s;
+    white-space: nowrap;
 }
 
-.pricing-cta-call svg { width: 16px; height: 16px; }
+.pricing-cta-call svg { width: 18px; height: 18px; flex-shrink: 0; }
 .pricing-cta-call:hover { color: var(--orange); }
 
 @media (max-width: 1000px) {
@@ -2879,11 +2887,11 @@ section { padding: 96px 40px; width: 100%; }
 
             <article class="testi-card fade-up" aria-label="Testimonial from Mike Johnson">
                 <div class="testi-rating" aria-label="5 out of 5 stars">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
                 </div>
                 <blockquote class="testi-quote">"Covered 200 acres in a fraction of the time it would've taken with traditional equipment, and the coverage was better too. We couldn't believe how fast they moved."</blockquote>
                 <div class="testi-author">
@@ -2894,11 +2902,11 @@ section { padding: 96px 40px; width: 100%; }
 
             <article class="testi-card fade-up" style="transition-delay:0.1s" aria-label="Testimonial from Sarah Anderson">
                 <div class="testi-rating" aria-label="5 out of 5 stars">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
                 </div>
                 <blockquote class="testi-quote">"Got our cover crop seeded into standing corn without any issues. The precision and efficiency saved us real time and money. Highly recommend their services."</blockquote>
                 <div class="testi-author">
@@ -2909,11 +2917,11 @@ section { padding: 96px 40px; width: 100%; }
 
             <article class="testi-card fade-up" style="transition-delay:0.2s" aria-label="Testimonial from Tom Peterson">
                 <div class="testi-rating" aria-label="5 out of 5 stars">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#f5a623"/></svg>
                 </div>
                 <blockquote class="testi-quote">"Professional from start to finish. They worked around the weather window and got our fields treated exactly when we needed it. Pricing was transparent and fair."</blockquote>
                 <div class="testi-author">
