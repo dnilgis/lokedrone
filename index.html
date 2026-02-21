@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loke Drone LC | Agricultural Drone Spraying Wisconsin & Minnesota | Chetek, WI</title>
-    <meta name="description" content="Professional agricultural drone services in Wisconsin and Minnesota. Crop spraying, cover crop seeding, frost seeding, and thermal deer recovery. FAA licensed, CCA certified. Based in Chetek, WI. Call (715) 797-2428.">
+    <meta name="description" content="FAA-licensed drone spraying in Wisconsin & Minnesota. $16–$18/acre, transparent pricing, CCA-certified pilots. Crop spraying, cover crop seeding, frost seeding & thermal deer recovery. Based in Chetek, WI. Call (715) 797-2428.">
     <meta name="keywords" content="agricultural drone spraying Wisconsin, ag drone services Minnesota, drone fungicide application, cover crop seeding drone, frost seeding Wisconsin, thermal deer recovery drone, Chetek WI drone pilot, Barron County drone spraying, drone crop application Wisconsin Minnesota">
     <link rel="canonical" href="https://lokedrone.com/">
 
@@ -63,9 +63,10 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "additionalType": "https://schema.org/AgriculturalBusiness",
       "name": "Loke Drone LC",
-      "description": "Professional agricultural drone services including crop spraying, cover crop seeding, frost seeding, and thermal deer recovery in Wisconsin and Minnesota.",
+      "description": "FAA-licensed, CCA-certified agricultural drone services in Wisconsin and Minnesota. Crop spraying, cover crop seeding, frost seeding, and thermal deer recovery. Transparent per-acre pricing starting at $16/acre.",
       "url": "https://lokedrone.com",
       "telephone": "+17157972428",
       "email": "info@lokedrone.com",
@@ -84,23 +85,58 @@
       },
       "areaServed": [
         {"@type": "State", "name": "Wisconsin"},
-        {"@type": "State", "name": "Minnesota"}
+        {"@type": "State", "name": "Minnesota"},
+        {"@type": "County", "name": "Barron County", "containedIn": {"@type": "State", "name": "Wisconsin"}},
+        {"@type": "County", "name": "Polk County", "containedIn": {"@type": "State", "name": "Wisconsin"}},
+        {"@type": "County", "name": "Rusk County", "containedIn": {"@type": "State", "name": "Wisconsin"}},
+        {"@type": "County", "name": "Chippewa County", "containedIn": {"@type": "State", "name": "Wisconsin"}},
+        {"@type": "County", "name": "Dunn County", "containedIn": {"@type": "State", "name": "Wisconsin"}},
+        {"@type": "County", "name": "Washburn County", "containedIn": {"@type": "State", "name": "Wisconsin"}},
+        {"@type": "County", "name": "St. Croix County", "containedIn": {"@type": "State", "name": "Wisconsin"}},
+        {"@type": "County", "name": "Burnett County", "containedIn": {"@type": "State", "name": "Wisconsin"}}
       ],
       "openingHours": "Mo-Sa 07:00-20:00",
       "priceRange": "$16–$18/acre",
+      "paymentAccepted": "Cash, Check, ACH Transfer",
+      "knowsAbout": ["Precision Agriculture", "Drone Spraying", "Cover Crop Seeding", "Frost Seeding", "Certified Crop Advisory", "DJI Agras T50", "DJI Agras T100", "Aerial Application"],
+      "sameAs": [
+        "https://usdronemap.com"
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "3"
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
       },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Travis H."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "These guys saved our soybean crop when the field was too wet to get equipment in. Called Monday, sprayed Wednesday. No compaction, no ruts, and the fungicide coverage was even. Will use every year from now on."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Dale M."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Sig and Kevin know their stuff — they're not just drone pilots, they're CCA certified. They caught that my spray rate was off before we even started. That kind of expertise saved me money and got me better results."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Randy K."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Used them for frost seeding this spring. Showed up on time, covered 180 acres in a morning, and sent me GPS coverage maps when they were done. Professional operation from start to finish."
+        }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Agricultural Drone Services",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Crop Spraying", "description": "Aerial application of fungicides, herbicides, and pesticides"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cover Crop Seeding", "description": "Aerial seeding of cover crops into standing crops"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Frost Seeding", "description": "Early spring aerial seeding using freeze-thaw cycles"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Thermal Deer Recovery", "description": "Post-harvest thermal imaging deer recovery services"}}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Crop Spraying", "description": "Aerial application of fungicides, herbicides, and pesticides. No field compaction, spray in wet conditions."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cover Crop Seeding", "description": "Aerial seeding of cover crops into standing corn or soybeans before harvest."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Frost Seeding", "description": "Early spring aerial seeding using freeze-thaw soil cycles for pasture renovation."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Thermal Deer Recovery", "description": "Post-harvest thermal imaging deer recovery services using DJI Matrice 4T."}}
         ]
       }
     }
@@ -173,11 +209,11 @@
     --green-light: #4a9a34;
     --green-dim: rgba(58,125,40,0.1);
     --text: #1a1d24;
-    --text-dim: #48505e;
-    --text-muted: #878d9c;
+    --text-dim: #383f4e;        /* darkened from #48505e — better contrast */
+    --text-muted: #5e6475;      /* darkened from #878d9c — passes WCAG AA */
     --text-inv: #e8eaf0;
-    --text-inv-dim: #9ca0b0;
-    --text-inv-muted: #5a5e6e;
+    --text-inv-dim: #b8bcc8;    /* brightened from #9ca0b0 */
+    --text-inv-muted: #6a6e7e;
     --border-light: rgba(0,0,0,0.07);
     --border-dark: rgba(255,255,255,0.07);
     --border-orange: rgba(224,77,10,0.3);
@@ -198,8 +234,8 @@ body {
     background: var(--cream-0);
     color: var(--text);
     font-family: var(--font-b);
-    font-size: 18px; /* larger for older farmers */
-    line-height: 1.65;
+    font-size: 20px; /* larger for older farmers */
+    line-height: 1.72;
     overflow-x: hidden;
 }
 
@@ -240,6 +276,8 @@ a { color: inherit; }
     align-items: center;
     gap: 8px;
     transition: color 0.2s;
+    font-size: 0.82rem;         /* slightly bigger — key CTA */
+    font-weight: 500;
 }
 
 .topbar-phone:hover { color: var(--orange); }
@@ -318,15 +356,16 @@ a { color: inherit; }
 
 .nav-cta {
     font-family: var(--font-m);
-    font-size: 0.72rem;
+    font-size: 0.78rem;         /* was 0.72 */
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: #fff;
     background: var(--orange);
-    padding: 11px 24px;
+    padding: 13px 28px;         /* was 11px 24px */
     text-decoration: none;
     transition: background 0.2s;
     white-space: nowrap;
+    font-weight: 600;
 }
 
 .nav-cta:hover { background: var(--orange-light); }
@@ -421,12 +460,12 @@ a { color: inherit; }
 .hero h1 em { font-style: normal; color: var(--orange); display: block; }
 
 .hero-desc {
-    font-size: 1.15rem;
-    color: var(--text-inv-dim);
-    line-height: 1.75;
+    font-size: 1.2rem;
+    color: #c8ccd8;             /* bright enough to read clearly on dark */
+    line-height: 1.8;
     margin-bottom: 44px;
     max-width: 460px;
-    font-weight: 300;
+    font-weight: 400;           /* was 300 — invisible on cheap screens */
 }
 
 .hero-stats {
@@ -439,7 +478,7 @@ a { color: inherit; }
 
 .hstat-num {
     font-family: var(--font-d);
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     font-weight: 800;
     color: var(--text-inv);
     line-height: 1;
@@ -447,8 +486,8 @@ a { color: inherit; }
 
 .hstat-label {
     font-family: var(--font-m);
-    font-size: 0.62rem;
-    color: var(--text-inv-muted);
+    font-size: 0.72rem;         /* was 0.62 */
+    color: var(--text-inv-dim);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-top: 5px;
@@ -754,9 +793,9 @@ section { padding: 96px 40px; width: 100%; }
 }
 
 .services-desc {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--text-dim);
-    font-weight: 300;
+    font-weight: 400;           /* was 300 */
     line-height: 1.85;
 }
 
@@ -867,10 +906,10 @@ section { padding: 96px 40px; width: 100%; }
 }
 
 .svc-desc {
-    font-size: 0.95rem;
+    font-size: 1rem;            /* was 0.95 */
     color: var(--text-dim);
-    line-height: 1.75;
-    font-weight: 300;
+    line-height: 1.8;
+    font-weight: 400;           /* was 300 */
     position: relative; z-index: 1;
     margin-bottom: 24px;
 }
@@ -878,9 +917,9 @@ section { padding: 96px 40px; width: 100%; }
 .svc-list { list-style: none; position: relative; z-index: 1; }
 
 .svc-list li {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    padding: 7px 0;
+    font-size: 0.95rem;         /* was 0.9 */
+    color: var(--text-dim);     /* was text-muted — darker */
+    padding: 8px 0;
     border-top: 1px solid var(--border-light);
     display: flex; gap: 10px; align-items: flex-start;
 }
@@ -931,8 +970,8 @@ section { padding: 96px 40px; width: 100%; }
 
 .proof-label {
     font-family: var(--font-m);
-    font-size: 0.65rem;
-    color: #8a8fa0;           /* lighter than --text-inv-muted */
+    font-size: 0.72rem;         /* was 0.65 */
+    color: #9ca0b0;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     line-height: 1.5;
@@ -981,7 +1020,7 @@ section { padding: 96px 40px; width: 100%; }
 
 .hiw-step-title {
     font-family: var(--font-d);
-    font-size: 1.4rem;
+    font-size: 1.5rem;          /* was 1.4 */
     font-weight: 700;
     text-transform: uppercase;
     color: var(--text);
@@ -990,10 +1029,10 @@ section { padding: 96px 40px; width: 100%; }
 }
 
 .hiw-step-desc {
-    font-size: 0.95rem;
+    font-size: 1rem;            /* was 0.95 */
     color: var(--text-dim);
-    font-weight: 300;
-    line-height: 1.75;
+    font-weight: 400;           /* was 300 */
+    line-height: 1.8;
 }
 
 /* ============================================
@@ -1220,10 +1259,10 @@ section { padding: 96px 40px; width: 100%; }
 }
 
 .fleet-role {
-    font-size: 0.9rem;
+    font-size: 1rem;            /* was 0.9 */
     color: var(--text-dim);
-    font-weight: 300;
-    line-height: 1.55;
+    font-weight: 400;           /* was 300 */
+    line-height: 1.65;
     margin-bottom: 16px;
 }
 
@@ -1235,16 +1274,16 @@ section { padding: 96px 40px; width: 100%; }
 
 .fleet-specs li {
     font-family: var(--font-m);
-    font-size: 0.68rem;
-    color: var(--text-muted);
-    padding: 5px 0;
+    font-size: 0.75rem;         /* was 0.68 */
+    color: var(--text-dim);     /* was text-muted */
+    padding: 6px 0;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--border-light);
 }
 
 .fleet-specs li:last-child { border-bottom: none; }
-.fleet-specs strong { color: var(--text-dim); font-weight: 500; }
+.fleet-specs strong { color: var(--text); font-weight: 600; }
 
 .fleet-scroll-hint {
     text-align: center;
@@ -1315,8 +1354,8 @@ section { padding: 96px 40px; width: 100%; }
 .cov-icon { width: 40px; height: 40px; background: var(--slate-2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .cov-icon svg { width: 20px; height: 20px; color: var(--orange); }
 
-.cov-feat-text h4 { font-family: var(--font-d); font-size: 1.15rem; font-weight: 700; text-transform: uppercase; color: #e8eaf0; margin-bottom: 5px; line-height: 1.1; }
-.cov-feat-text p { font-size: 0.95rem; color: #b8bcc8; font-weight: 400; line-height: 1.7; }
+.cov-feat-text h4 { font-family: var(--font-d); font-size: 1.25rem; font-weight: 700; text-transform: uppercase; color: #e8eaf0; margin-bottom: 6px; line-height: 1.1; }
+.cov-feat-text p { font-size: 1rem; color: #c0c4d0; font-weight: 400; line-height: 1.75; }
 
 .verification-wrap { display: flex; margin-top: 28px; }
 .verification-wrap a { display: inline-block; transition: opacity 0.2s; }
@@ -1331,10 +1370,10 @@ section { padding: 96px 40px; width: 100%; }
 .faq-layout { display: grid; grid-template-columns: 340px 1fr; gap: 80px; align-items: start; }
 
 .faq-intro-text {
-    font-size: 1rem;
+    font-size: 1.05rem;         /* was 1.0 */
     color: var(--text-dim);
-    font-weight: 300;
-    line-height: 1.8;
+    font-weight: 400;           /* was 300 */
+    line-height: 1.85;
     margin-top: 16px;
 }
 
@@ -1388,7 +1427,7 @@ section { padding: 96px 40px; width: 100%; }
     align-items: center;
     gap: 20px;
     transition: color 0.2s;
-}
+    font-size: 1.1rem;          /* was 1.05 */
 
 .faq-q:hover { color: var(--orange); }
 
@@ -1413,11 +1452,11 @@ section { padding: 96px 40px; width: 100%; }
 }
 
 .faq-a-inner {
-    padding: 0 0 22px 0;
-    font-size: 1rem;
+    padding: 0 0 24px 0;
+    font-size: 1.05rem;         /* was 1.0 */
     color: var(--text-dim);
-    font-weight: 300;
-    line-height: 1.8;
+    font-weight: 400;           /* was 300 */
+    line-height: 1.85;
 }
 
 /* ============================================
@@ -1445,10 +1484,10 @@ section { padding: 96px 40px; width: 100%; }
 .testi-rating svg { width: 16px; height: 16px; fill: #f5a623; }
 
 .testi-quote {
-    font-size: 1rem;
-    color: #c0c4d0;           /* brighter than --text-inv-dim */
+    font-size: 1.05rem;         /* was 1.0 */
+    color: #c8ccd6;             /* slightly brighter */
     font-weight: 400;
-    line-height: 1.85;
+    line-height: 1.9;
     font-style: italic;
     margin-bottom: 24px;
     border-left: 2px solid var(--orange);
@@ -1517,14 +1556,14 @@ section { padding: 96px 40px; width: 100%; }
     flex-shrink: 0;
 }
 
-.contact-val { font-size: 1rem; color: var(--text-dim); line-height: 1.6; }
+.contact-val { font-size: 1.05rem; color: var(--text-dim); line-height: 1.65; }
 
-.contact-val a { color: var(--orange); text-decoration: none; font-weight: 500; }
+.contact-val a { color: var(--orange); text-decoration: none; font-weight: 600; }
 .contact-val a:hover { text-decoration: underline; }
 
 .pilot-card {
     background: var(--cream-0);
-    padding: 14px 16px;
+    padding: 16px 18px;
     margin-bottom: 10px;
     border-left: 3px solid var(--green);
 }
@@ -1533,7 +1572,7 @@ section { padding: 96px 40px; width: 100%; }
 
 .pilot-name {
     font-family: var(--font-d);
-    font-size: 1.1rem;
+    font-size: 1.2rem;          /* was 1.1 */
     font-weight: 700;
     text-transform: uppercase;
     color: var(--text);
@@ -1549,7 +1588,7 @@ section { padding: 96px 40px; width: 100%; }
     margin-bottom: 6px;
 }
 
-.pilot-phone a { color: var(--green) !important; font-weight: 600; font-size: 1.05rem; }
+.pilot-phone a { color: var(--green) !important; font-weight: 700; font-size: 1.25rem; }
 
 /* Contact form */
 .contact-form-wrap { display: flex; flex-direction: column; gap: 14px; }
@@ -1598,16 +1637,16 @@ section { padding: 96px 40px; width: 100%; }
 
 .btn-submit {
     font-family: var(--font-b);
-    font-size: 1.05rem;
-    font-weight: 600;
-    padding: 16px 32px;
+    font-size: 1.1rem;          /* was 1.05 */
+    font-weight: 700;           /* was 600 */
+    padding: 18px 40px;         /* was 16px 32px */
     background: var(--orange);
     color: #fff;
     border: none;
     cursor: pointer;
     transition: background 0.2s;
     align-self: flex-start;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
 }
 
 .btn-submit:hover { background: var(--orange-light); }
@@ -1624,7 +1663,7 @@ section { padding: 96px 40px; width: 100%; }
 .form-success.visible { display: block; }
 
 /* ============================================
-   FOOTER — slim single bar
+   FOOTER — single slim bar
    ============================================ */
 .footer {
     background: var(--slate-0);
@@ -1634,50 +1673,25 @@ section { padding: 96px 40px; width: 100%; }
 .footer-main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 28px 40px;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
     gap: 16px;
-}
-
-.footer-brand img { height: 32px; }
-
-.footer-brand-name {
-    font-family: var(--font-d);
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #c8cad4;
-}
-
-.footer-brand-sub {
-    font-family: var(--font-m);
-    font-size: 0.6rem;
-    color: #6a6e7e;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-top: 2px;
 }
 
 .footer-links-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 24px;
+    gap: 4px 20px;
     list-style: none;
 }
 
 .footer-links-list a {
     font-family: var(--font-m);
-    font-size: 0.68rem;
-    color: #8a8fa0;
+    font-size: 0.65rem;
+    color: #6a6e7e;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.07em;
@@ -1690,7 +1704,7 @@ section { padding: 96px 40px; width: 100%; }
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 8px;
+    gap: 6px;
 }
 
 .footer-contact-phones {
@@ -1702,9 +1716,9 @@ section { padding: 96px 40px; width: 100%; }
 
 .footer-contact-phones a {
     font-family: var(--font-b);
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #c8cad4;
+    font-size: 1rem;            /* was 0.88 */
+    font-weight: 700;           /* was 600 */
+    color: #d0d2dc;             /* slightly brighter */
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -1713,14 +1727,14 @@ section { padding: 96px 40px; width: 100%; }
 
 .footer-copy {
     font-family: var(--font-m);
-    font-size: 0.58rem;
-    color: #5a5e6e;
+    font-size: 0.56rem;
+    color: #4a4e5e;
     text-transform: uppercase;
     letter-spacing: 0.07em;
 }
 
 @media (max-width: 900px) {
-    .footer-main { flex-direction: column; align-items: flex-start; padding: 24px; }
+    .footer-main { flex-direction: column; align-items: flex-start; padding: 20px; padding-bottom: 90px; }
     .footer-right { align-items: flex-start; }
     .footer-contact-phones { justify-content: flex-start; }
 }
@@ -1743,10 +1757,10 @@ section { padding: 96px 40px; width: 100%; }
     display: block;
     flex: 1;
     text-align: center;
-    padding: 14px;
+    padding: 16px;              /* was 14px */
     font-family: var(--font-b);
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;          /* was 1rem */
+    font-weight: 700;           /* was 600 */
     text-decoration: none;
     transition: background 0.2s;
 }
@@ -1785,7 +1799,7 @@ section { padding: 96px 40px; width: 100%; }
 }
 
 @media (max-width: 900px) {
-    body { font-size: 17px; }
+    body { font-size: 18px; }   /* was 17 — keep large for mobile too */
     section { padding: 60px 20px; }
     .topbar { padding: 8px 20px; }
     .navbar { padding: 0 20px; }
@@ -1811,7 +1825,7 @@ section { padding: 96px 40px; width: 100%; }
 }
 
 @media (max-width: 640px) {
-    body { font-size: 16px; }
+    body { font-size: 17px; }   /* was 16 — farmers on phones still need readable text */
     section { padding: 52px 16px; }
     .topbar { padding: 7px 16px; }
     .topbar-left { display: none; }
@@ -2104,9 +2118,9 @@ section { padding: 96px 40px; width: 100%; }
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-logo">
         <a href="/" aria-label="Loke Drone LC — Home">
-            <svg viewBox="0 0 150 56" height="52" width="auto" role="img" aria-label="Loke Drone LC" style="display:block">
-              <text x="0" y="26" font-family="'Barlow Condensed', sans-serif" font-size="34" font-weight="900" letter-spacing="1.5" fill="#878d9c">LOKE</text>
-              <text x="0" y="54" font-family="'Barlow Condensed', sans-serif" font-size="34" font-weight="900" letter-spacing="1.5" fill="#e04d0a">DRONE</text>
+            <svg id="logo-nav" viewBox="0 0 285 210" height="52" width="auto" role="img" aria-label="Loke Drone LC" style="display:block">
+              <text x="2" y="118" font-family="'Barlow Condensed', sans-serif" font-size="118" font-weight="900" fill="#3a3d46">LOKE</text>
+              <text id="logo-nav-drone" x="2" y="198" font-family="'Barlow Condensed', sans-serif" font-size="85" font-weight="900" font-style="italic" fill="#e04d0a">DRONE</text>
             </svg>
         </a>
     </div>
@@ -3025,17 +3039,16 @@ section { padding: 96px 40px; width: 100%; }
      ============================================ -->
 <footer class="footer" role="contentinfo">
     <div class="footer-main">
-        <div class="footer-brand">
-            <svg viewBox="0 0 150 56" height="40" width="auto" role="img" aria-label="Loke Drone LC" style="display:block;flex-shrink:0">
-              <text x="0" y="26" font-family="'Barlow Condensed', sans-serif" font-size="34" font-weight="900" letter-spacing="1.5" fill="#878d9c">LOKE</text>
-              <text x="0" y="54" font-family="'Barlow Condensed', sans-serif" font-size="34" font-weight="900" letter-spacing="1.5" fill="#e04d0a">DRONE</text>
-            </svg>
-            <div>
-                <div class="footer-brand-name">Loke Drone LC</div>
-                <div class="footer-brand-sub">AAOC #23021A · Chetek, WI · FAA Licensed · CCA Certified</div>
-            </div>
-        </div>
 
+        <!-- Logo only — no redundant text next to it -->
+        <a href="/" aria-label="Loke Drone LC — Home" style="flex-shrink:0">
+            <svg id="logo-footer" viewBox="0 0 285 210" height="36" width="auto" role="img" aria-label="Loke Drone LC" style="display:block">
+              <text x="2" y="118" font-family="'Barlow Condensed', sans-serif" font-size="118" font-weight="900" fill="#3a3d46">LOKE</text>
+              <text id="logo-footer-drone" x="2" y="198" font-family="'Barlow Condensed', sans-serif" font-size="85" font-weight="900" font-style="italic" fill="#e04d0a">DRONE</text>
+            </svg>
+        </a>
+
+        <!-- Nav links -->
         <ul class="footer-links-list" role="list">
             <li><a href="#services">Services</a></li>
             <li><a href="#fleet">Fleet</a></li>
@@ -3043,16 +3056,17 @@ section { padding: 96px 40px; width: 100%; }
             <li><a href="#coverage">Coverage</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://usdronemap.com" target="_blank" rel="noopener noreferrer">US Drone Map</a></li>
         </ul>
 
+        <!-- Right: phones + copy -->
         <div class="footer-right">
             <div class="footer-contact-phones">
-                <a href="tel:+17157972428" aria-label="Call Sig at (715) 797-2428">Sig — (715) 797-2428</a>
-                <a href="tel:+17156411239" aria-label="Call Kevin at (715) 641-1239">Kevin — (715) 641-1239</a>
+                <a href="tel:+17157972428" aria-label="Call Sig">Sig — (715) 797-2428</a>
+                <a href="tel:+17156411239" aria-label="Call Kevin">Kevin — (715) 641-1239</a>
             </div>
-            <div class="footer-copy">© 2025 Loke Drone LC · Wisconsin &amp; Minnesota</div>
+            <div class="footer-copy">© 2025 Loke Drone LC · WI &amp; MN · AAOC #23021A</div>
         </div>
+
     </div>
 </footer>
 
@@ -3101,8 +3115,49 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ============================================
-   GA4 PHONE CLICK TRACKING (moved out of <head>)
+   LOGO — inject arrow into O of DRONE
    ============================================ */
+(function() {
+  const NS = 'http://www.w3.org/2000/svg';
+  const ARROW = '#8a8fa0';
+
+  function injectArrow(svgId, droneTextId, bg) {
+    const svg   = document.getElementById(svgId);
+    const drone = document.getElementById(droneTextId);
+    if (!svg || !drone) return;
+
+    let cx = 123, cy = 168, r = 8;
+    try {
+      const ext = drone.getExtentOfChar(2); // O is index 2 in DRONE
+      cx = ext.x + ext.width  * 0.5;
+      cy = ext.y + ext.height * 0.5;
+      r  = Math.min(ext.width, ext.height) * 0.33;
+    } catch(e) { /* use fallback */ }
+
+    // Gray ring with bg-fill (shows as ring inside O's transparent counter)
+    const ring = document.createElementNS(NS, 'circle');
+    ring.setAttribute('cx', String(cx));
+    ring.setAttribute('cy', String(cy));
+    ring.setAttribute('r',  String(r));
+    ring.setAttribute('fill',         bg);
+    ring.setAttribute('stroke',       ARROW);
+    ring.setAttribute('stroke-width', '1.6');
+    svg.insertBefore(ring, drone);
+
+    // Navigation arrow — right-pointing arrowhead rotated -45° → points NE
+    const arrow = document.createElementNS(NS, 'path');
+    const s = r * 0.6;
+    arrow.setAttribute('d', `M ${-s},${-s*1.1} L ${s*1.1},0 L ${-s},${s*1.1} L ${-s*0.3},0 Z`);
+    arrow.setAttribute('fill', ARROW);
+    arrow.setAttribute('transform', `translate(${cx},${cy}) rotate(-45)`);
+    svg.insertBefore(arrow, drone);
+  }
+
+  document.fonts.ready.then(function() {
+    injectArrow('logo-nav',    'logo-nav-drone',    '#f7f5f0');
+    injectArrow('logo-footer', 'logo-footer-drone', '#2a2e38');
+  });
+})();
 document.addEventListener('click', function(e) {
     const tel = e.target.closest('a[href^="tel:"]');
     if (tel && typeof gtag !== 'undefined') {
