@@ -3335,7 +3335,7 @@ function goBack() {
     document.getElementById('step1').classList.add('active');
 }
 
-function submitEmail() {
+async function submitEmail() {
     const email = document.getElementById('emailInput').value.trim();
     if (!email || !email.includes('@') || !email.includes('.')) {
         document.getElementById('emailInput').focus();
